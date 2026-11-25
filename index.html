@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Friction — daily problems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,650&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a calm morning newsroom — plain, exact, useful.
+   IDEA: the front page of a daily paper whose only beat is everyday frustrations.
+   PICTURE: the lead story, set large, with its three scores drawn as gauges.
+   COLOUR and TYPE: white newsprint / night ink, one cobalt accent, red only for "getting worse"; Newsreader heads, Public Sans text.
+   LAYOUT: masthead, tabs, filter bar, lead story, then a single top-down column of stories; detail pages split into article + side panel. */
+:root{color-scheme:light;--bg:#ffffff;--ink:#121417;--mute:#5b6068;--line:#e3e4e6;--soft:#f4f5f7;--acc:#2447d6;--bad:#c62e25;--ok:#1d7a46;--flat:#8a6d00}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;--bg:#0f1216;--ink:#ece9e2;--mute:#a3a7ad;--line:#262b32;--soft:#171b21;--acc:#7f9bff;--bad:#ff7a6e;--ok:#5fd193;--flat:#e2c35a}}
+:root[data-theme=dark]{color-scheme:dark;--bg:#0f1216;--ink:#ece9e2;--mute:#a3a7ad;--line:#262b32;--soft:#171b21;--acc:#7f9bff;--bad:#ff7a6e;--ok:#5fd193;--flat:#e2c35a}
+:root[data-fr-theme=light]{color-scheme:light !important;--bg:#ffffff !important;--ink:#121417 !important;--mute:#5b6068 !important;--line:#e3e4e6 !important;--soft:#f4f5f7 !important;--acc:#2447d6 !important;--bad:#c62e25 !important;--ok:#1d7a46 !important;--flat:#8a6d00 !important}
+:root[data-fr-theme=dark]{color-scheme:dark !important;--bg:#0f1216 !important;--ink:#ece9e2 !important;--mute:#a3a7ad !important;--line:#262b32 !important;--soft:#171b21 !important;--acc:#7f9bff !important;--bad:#ff7a6e !important;--ok:#5fd193 !important;--flat:#e2c35a !important}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px}
+body{margin:0;background:var(--bg) !important;color:var(--ink) !important;font:16px/1.55 "Public Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 max(4vw,16px)}
+header.mast{border-bottom:3px double var(--ink);padding:18px 0 12px}
+.mtop{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:13px;color:var(--mute)}
+.brand{font:650 clamp(40px,7vw,64px)/1 Newsreader,Georgia,serif;letter-spacing:-.02em;margin:10px 0 4px;text-align:center}
+.tag{text-align:center;color:var(--mute);margin:0 0 4px;font-size:15px}
+.btn{font:600 14px "Public Sans",sans-serif;min-height:44px;padding:0 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+nav.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-top:4px}
+nav.tabs a{padding:12px 14px;text-decoration:none;font-weight:600;color:var(--mute);border-bottom:3px solid transparent;margin-bottom:-1px}
+nav.tabs a[aria-current=page]{color:var(--ink);border-color:var(--acc)}
+.count{display:inline-block;min-width:22px;padding:0 6px;border-radius:11px;background:var(--soft);font-size:13px;text-align:center;margin-left:4px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;padding:14px 0;border-bottom:1px solid var(--line)}
+.filters input,.filters select{font:16px "Public Sans",sans-serif;min-height:44px;padding:0 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.filters input{flex:1 1 220px}
+.filters select{flex:0 1 auto}
+.story{padding:26px 0;border-bottom:1px solid var(--line)}
+.meta{font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.cat{font-weight:700;color:var(--acc)}
+.trend{font-weight:600}.trend.worse{color:var(--bad)}.trend.steady{color:var(--flat)}.trend.better{color:var(--ok)}
+.story h2{font:650 clamp(23px,2.6vw,30px)/1.15 Newsreader,Georgia,serif;margin:8px 0 8px;text-wrap:balance}
+.story h2 a{text-decoration:none}.story h2 a:hover{text-decoration:underline;text-decoration-thickness:2px}
+.lead h2{font-size:clamp(32px,4.6vw,48px);line-height:1.05}
+.dek{margin:0 0 14px;max-width:68ch;color:var(--ink)}
+.lead .dek{font-size:18px}
+.srow{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.6fr) auto;gap:18px;align-items:center}
+.key b{display:block;font:650 26px/1.1 Newsreader,Georgia,serif;white-space:nowrap}
+.key span{font-size:13px;color:var(--mute)}
+.lead .key b{font-size:clamp(34px,5vw,52px)}
+.gauges{display:grid;gap:6px}
+.g{display:grid;grid-template-columns:7.2em minmax(0,1fr) 2.2em;gap:8px;align-items:center;font-size:13px}
+.g .bar{height:8px;border-radius:4px;background:var(--soft);overflow:hidden}
+.g .bar i{display:block;height:100%;background:var(--acc);border-radius:4px}
+.g output{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.save{white-space:nowrap}
+.save[aria-pressed=true]{background:var(--acc);border-color:var(--acc);color:#fff}
+.save svg{width:18px;height:18px}
+.why{font-size:14px;color:var(--mute);margin:12px 0 0;max-width:72ch}
+.why b{color:var(--ink)}
+.empty{padding:48px 0;color:var(--mute);text-align:center}
+nav.tabs{overflow-x:auto}nav.tabs a{flex:none}
+.intro{margin:18px 0 0;color:var(--mute);max-width:70ch}
+.addbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:16px 0;border-bottom:1px solid var(--line)}
+.addbar h3,.secth{font:650 22px/1.2 Newsreader,Georgia,serif;margin:0}
+.secth{margin-top:26px}
+.btn.pri{background:var(--acc);border-color:var(--acc);color:#fff}
+.addf{display:grid;gap:12px;padding:18px;margin:14px 0;border:1px solid var(--line);border-radius:12px;background:var(--soft)}
+.addf label{display:grid;gap:6px;font-weight:600;font-size:14px}
+.addf input,.addf select,.addf textarea{font:16px "Public Sans",sans-serif;min-height:44px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.addf textarea{min-height:96px}
+.addf .acts{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;padding:2px 10px;border-radius:12px;font-size:12px;font-weight:700;background:var(--soft);color:var(--acc)}
+.pending{border:1px dashed var(--line);border-radius:12px;padding:18px;margin:14px 0}
+.pending h2{font:650 24px/1.2 Newsreader,Georgia,serif;margin:8px 0}
+.pending p{margin:0 0 8px;max-width:68ch}
+.chat{border:2px solid var(--acc);border-radius:14px;padding:16px;margin-top:30px}
+.chat h3{border:0;padding:0;margin:0 0 4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.chips .btn{min-height:40px;font-size:14px}
+.msgs{display:grid;gap:10px;max-height:560px;overflow-y:auto;margin:10px 0}
+.msg{padding:12px 14px;border-radius:12px;white-space:pre-wrap;overflow-wrap:anywhere;max-width:92%}
+.msg.user{justify-self:end;background:var(--acc);color:#fff}
+.msg.bot{justify-self:start;background:var(--soft)}
+.msg.bot .tools{display:flex;gap:8px;margin-top:8px}
+.msg.bot .tools .btn{min-height:36px;font-size:13px;padding:0 10px}
+.msg.err{background:transparent;border:1px solid var(--bad);color:var(--bad)}
+.ask{display:flex;gap:8px;align-items:flex-end}
+.ask textarea{min-height:56px;flex:1}
+.chatfoot{display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:8px}
+.note-line{font-size:14px;margin:10px 0 0;padding:8px 12px;background:var(--soft);border-radius:8px}
+/* detail */
+.back{display:inline-flex;align-items:center;min-height:44px;font-weight:600;text-decoration:none;color:var(--acc);margin-top:12px}
+.dgrid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:40px;padding:8px 0 48px}
+.dhead h1{font:650 clamp(32px,4.6vw,48px)/1.05 Newsreader,Georgia,serif;margin:10px 0 12px;text-wrap:balance}
+.dhead .dek{font-size:19px}
+section.blk{margin-top:30px}
+section.blk h3{font:650 22px/1.2 Newsreader,Georgia,serif;margin:0 0 10px;padding-top:14px;border-top:1px solid var(--line)}
+.blk p{max-width:68ch;margin:0 0 10px}
+.blk ul{margin:0;padding-left:1.2em;max-width:68ch}.blk li{margin:0 0 8px}
+.voices li{list-style:none;margin-left:-1.2em;padding:10px 14px;border-left:3px solid var(--line);background:var(--soft);border-radius:0 8px 8px 0}
+.small{font-size:13px;color:var(--mute)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.stat{padding:14px;border:1px solid var(--line);border-radius:10px}
+.stat b{display:block;font:650 28px/1.1 Newsreader,Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.stat span{font-size:14px}.stat a{font-size:12px;color:var(--mute)}
+.chart{border:1px solid var(--line);border-radius:10px;padding:16px}
+.chart h4{margin:0 0 12px;font-size:15px}
+.crow{display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr) 5.2em;gap:10px;align-items:center;margin:0 0 9px;font-size:14px}
+.crow .bar{height:16px;background:var(--soft);border-radius:4px;overflow:hidden}
+.crow .bar i{display:block;height:100%;background:var(--acc)}
+.crow output{text-align:right;font-weight:700;font-variant-numeric:tabular-nums;white-space:nowrap}
+.exist{display:grid;gap:10px}
+.exist div{padding:12px 14px;border:1px solid var(--line);border-radius:10px}
+.exist b{display:block}.exist span{font-size:14px;color:var(--mute)}
+.sparks li{font-family:Newsreader,Georgia,serif;font-size:19px;line-height:1.35}
+.side{position:sticky;top:16px;align-self:start;display:grid;gap:16px}
+.panel{border:1px solid var(--line);border-radius:12px;padding:16px}
+.panel h4{margin:0 0 10px;font-size:15px}
+.big .g{grid-template-columns:7.6em minmax(0,1fr) 2.4em;font-size:14px}
+.big .bar{height:12px}
+.panel p{margin:10px 0 0;font-size:13px;color:var(--mute)}
+textarea{width:100%;min-height:220px;font:16px/1.5 "Public Sans",sans-serif;padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);resize:vertical}
+.status{font-size:13px;color:var(--mute);min-height:1.4em;margin-top:6px}
+.srcs li{font-size:14px}
+footer{border-top:3px double var(--ink);padding:16px 0 40px;color:var(--mute);font-size:13px}
+@media(max-width:860px){.dgrid{grid-template-columns:minmax(0,1fr)}.side{position:static}.srow{grid-template-columns:minmax(0,1fr) auto}.gauges{grid-column:1/-1;grid-row:2}}
+@media(max-width:600px){.mtop .date{display:none}.crow{grid-template-columns:minmax(0,1fr) 4.6em}.crow .bar{grid-column:1/-1;grid-row:2}.g{grid-template-columns:6.6em minmax(0,1fr) 2em}}
+@media(prefers-reduced-motion:no-preference){.crow .bar i{animation:grow .6s ease-out both;transform-origin:left}@keyframes grow{from{transform:scaleX(0)}}}
+</style>
+</head>
+<body>
+<header class="mast"><div class="wrap">
+  <div class="mtop"><span class="date" id="edDate">Loading today's edition…</span><span id="edNote"></span>
+    <button class="btn" id="themeBtn" type="button" aria-label="Switch color theme"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg><span id="themeLbl">Dark</span></button></div>
+  <div class="brand">Friction</div>
+  <p class="tag">The everyday problems people are complaining about today, with the evidence, so you can build the fix.</p>
+</div></header>
+<div class="wrap">
+  <nav class="tabs" aria-label="Sections"><a href="#today" id="tabToday">Today's 15</a><a href="#personal" id="tabPersonal">Personal</a><a href="#saved" id="tabSaved">My problems <span class="count" id="savedCount">0</span></a></nav>
+  <main id="view"></main>
+  <footer>Topics are picked each morning from recent news, surveys, reviews and forum posts. Complaints are paraphrased. Scores are estimates: <b>Reach</b> is how many people it affects, <b>Growth</b> is how fast it's getting worse, and <b>Solvable</b> is how realistic a fix is for a small team. <span id="syncNote"></span></footer>
+</div>
+<script>
+{
+const $=s=>document.querySelector(s);
+const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const href=u=>/^https:\/\//.test(String(u||''))?esc(u):'#';
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch{return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch{}}};
+const root=document.documentElement;
+const TREND={worse:'Getting worse',steady:'Holding steady',better:'Getting better'};
+const STAR='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg>';
+const STAR_O='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2.8l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 17.2l-5.7 3.1 1.2-6.4L2.8 9.5l6.4-.8z"/></svg>';
+
+let feed=null;
+const filt={q:'',cat:'all',region:'all',trend:'all',sort:'rank'};
+const store={saved:LS.get('fr-saved',{}),notes:LS.get('fr-notes',{}),subs:LS.get('fr-subs',{}),sc:null,nc:null,subc:null,queue:{}};
+let showAdd=false;
+/* chat with Claude, per problem */
+const chat={turns:LS.get('fr-chats',{}),busy:null,ctl:null,err:{},fn:undefined,col:null,off:false};
+(async()=>{try{chat.fn=typeof claude!=='undefined'&&claude.use?await claude.use('sample'):null}catch{chat.fn=null}paintChat()})();
+function saveChat(id){
+  const t=(chat.turns[id]||[]).slice(-30);chat.turns[id]=t;LS.set('fr-chats',chat.turns);
+  if(chat.col)queueWrite('c'+id,()=>t.length?chat.col.doc(id).set({turns:t,updatedAt:new Date().toISOString()}):chat.col.doc(id).delete());
+}
+function chatRules(t){
+  const brief={title:t.title,dek:t.dek,category:t.category,region:t.region,frustration:t.frustration,who:t.who,causes:t.causes,existing:t.existing,stats:(t.stats||[]).map(s=>s.value+' '+s.label),scores:t.scores,sparks:t.sparks};
+  const notes=(store.notes[t.id]||'').slice(0,3000);
+  return `You're helping Ishaan, a student who builds apps, websites and browser games, work out a real solution to an everyday problem from his "Friction" problems site. Be a sharp, encouraging but honest thinking partner: concrete ideas, realistic for a student or small team to build, and say plainly when an idea is weak or already exists. Keep replies short and skimmable: plain text, short paragraphs, "- " bullets when listing, **bold** for key words only, no headings, no tables. Ask at most one question at a time.
+
+THE PROBLEM (researched data):
+${JSON.stringify(brief)}
+
+ISHAAN'S NOTEBOOK FOR THIS PROBLEM:
+${notes||'(empty so far)'}`;
+}
+const QUICK=[['Brainstorm 5 ideas','Brainstorm 5 different solution ideas for this problem, from a simple app or site I could build to something bigger. One or two lines each, and mark the one you think is most promising.'],
+['What would I build first?','If I wanted to start this week, what is the smallest useful thing I could build to test whether people want a fix? Give me the first version, how to test it, and what would tell me it is working.'],
+['Critique my notebook','Read my notebook for this problem and critique my ideas honestly: what is strong, what is weak, what already exists, and what I should do next. If the notebook is empty, tell me what to think about first.'],
+['Who has it worst?','Who has this problem worst, and what would a solution designed just for them look like?']];
+function fmtMsg(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>')}
+function chatInner(id){
+  if(chat.fn===null||chat.off)return `<p class="small">Chatting with Claude isn't available in this view. You can always bring this problem to a Claude conversation instead.</p>`;
+  if(chat.fn===undefined)return `<p class="small">Connecting to Claude…</p>`;
+  const turns=chat.turns[id]||[],busy=chat.busy&&chat.busy.id===id;
+  const msgs=turns.map((m,i)=>m.role==='user'?`<div class="msg user">${esc(m.label||m.content)}</div>`:
+    `<div class="msg bot">${fmtMsg(m.content)}<div class="tools"><button class="btn" type="button" data-tonote="${i}">+ Add to notebook</button></div></div>`).join('')+
+    (busy?`<div class="msg bot" id="liveMsg">${chat.busy.text?fmtMsg(chat.busy.text):'Thinking…'}</div>`:'')+
+    (chat.err[id]?`<div class="msg err">${esc(chat.err[id])}</div>`:'');
+  return `${turns.length||busy?'':`<p class="small">I already know this problem's evidence, causes and your notebook. Pick a starter or ask anything.</p>`}
+  <div class="chips">${QUICK.map(([l],i)=>`<button class="btn" type="button" data-quick="${i}"${busy?' disabled':''}>${l}</button>`).join('')}</div>
+  <div class="msgs" id="msgs">${msgs}</div>
+  <form class="ask" id="askForm"><textarea id="askBox" aria-label="Message Claude" placeholder="Ask about this problem or pitch an idea…"${busy?' disabled':''}></textarea>
+  ${busy?'<button class="btn" type="button" id="stopChat">Stop</button>':'<button class="btn pri" type="submit">Send</button>'}</form>
+  <div class="chatfoot"><span class="small">Uses your Claude usage. Chats are saved per problem.</span>${turns.length&&!busy?'<button class="btn" type="button" id="clearChat">Clear chat</button>':''}</div>`;
+}
+function chatHTML(t){return `<section class="chat" id="chatBox" data-id="${esc(t.id)}"><h3>Solve this with Claude</h3><div id="chatInner">${chatInner(t.id)}</div></section>`}
+function paintChat(){const box=$('#chatBox');if(!box)return;$('#chatInner').innerHTML=chatInner(box.dataset.id);const m=$('#msgs');if(m)m.scrollTop=m.scrollHeight}
+async function sendChat(t,content,label){
+  if(!chat.fn||chat.busy)return;
+  const id=t.id;chat.turns[id]=chat.turns[id]||[];delete chat.err[id];
+  chat.turns[id].push(label?{role:'user',content,label}:{role:'user',content});saveChat(id);
+  const ctl=new AbortController();chat.ctl=ctl;chat.busy={id,text:''};paintChat();
+  const turns=chat.turns[id].slice(-20).map(m=>({role:m.role,content:m.content}));
+  try{
+    const {text,truncated}=await chat.fn([{role:'user',content:chatRules(t)},...turns],{cache:false,signal:ctl.signal,onText:({text})=>{chat.busy.text=text;const live=$('#liveMsg');if(live){live.innerHTML=fmtMsg(text);const m=$('#msgs');if(m)m.scrollTop=m.scrollHeight}}});
+    chat.turns[id].push({role:'assistant',content:text+(truncated?'\n\n(Cut short. Ask me to continue.)':'')});saveChat(id);
+  }catch(e){
+    if(e?.text)chat.turns[id].push({role:'assistant',content:e.text+'\n\n(Interrupted)'});
+    const c=e?.code;
+    if(['not_granted','sampling_disabled','not_declared','capability_disabled','capability_removed'].includes(c))chat.off=true;
+    else if(c!=='cancelled')chat.err[id]=c==='rate_limited'?'Claude is busy or you’ve hit a usage limit. Try again in a bit.':c==='session_expired'?'Please sign in to Claude again.':c==='refused'?'Claude couldn’t answer that one. Try rephrasing.':'Something went wrong. Try sending again.';
+    saveChat(id);
+  }finally{chat.busy=null;chat.ctl=null;paintChat()}
+}
+const CATS=['Tech','School','Money','Home','Habits','Social','Health','Transport','Work','Other'];
+/* problems Ishaan adds himself: shared 'submissions' collection, so the morning update can research them */
+function subTopic(s){return s.topic?{...s.topic,id:s.id,mine:true}:{id:s.id,title:s.title,dek:s.details||'',category:s.category||'Other',region:'Yours',trend:'',mine:true,pending:true}}
+function addSubmission(title,details,category){
+  const id='u-'+Date.now().toString(36);
+  const rec={id,title,details,category,status:'pending',createdAt:new Date().toISOString()};
+  store.subs[id]=rec;LS.set('fr-subs',store.subs);
+  if(store.subc)queueWrite('u'+id,()=>store.subc.doc(id).set(rec));
+  return id;
+}
+function removeSubmission(id){
+  delete store.subs[id];LS.set('fr-subs',store.subs);
+  if(store.subc)queueWrite('u'+id,()=>store.subc.doc(id).delete());
+}
+
+/* theme */
+/* our own attribute, so the app's data-theme can't overwrite the choice */
+function curTheme(){
+  if(root.dataset.frTheme)return root.dataset.frTheme;
+  if(root.dataset.theme==='dark'||root.dataset.theme==='light')return root.dataset.theme;
+  return matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';
+}
+function paintTheme(){const d=curTheme()==='dark';$('#themeLbl').textContent=d?'Light mode':'Dark mode';$('#themeBtn').setAttribute('aria-pressed',String(d))}
+const savedTheme=LS.get('fr-theme',null);if(savedTheme)root.dataset.frTheme=savedTheme;
+paintTheme();
+new MutationObserver(paintTheme).observe(root,{attributes:true,attributeFilter:['data-theme']});
+$('#themeBtn').addEventListener('click',()=>{const n=curTheme()==='dark'?'light':'dark';root.dataset.frTheme=n;LS.set('fr-theme',n);paintTheme()});
+
+/* storage: local first, synced to the artifact database when available */
+function queueWrite(key,fn){const prev=store.queue[key]||Promise.resolve();store.queue[key]=prev.then(fn).catch(()=>{})}
+function persist(){LS.set('fr-saved',store.saved);LS.set('fr-notes',store.notes)}
+function toggleSave(t){
+  if(store.saved[t.id]){delete store.saved[t.id];if(store.sc)queueWrite('s'+t.id,()=>store.sc.doc(t.id).delete())}
+  else{const rec={topic:t,edition:feed?.edition||'',savedAt:new Date().toISOString()};store.saved[t.id]=rec;if(store.sc)queueWrite('s'+t.id,()=>store.sc.doc(t.id).set(rec))}
+  persist();render();
+}
+let noteTimer=null;
+function setNote(id,text){
+  store.notes[id]=text;persist();
+  clearTimeout(noteTimer);const st=$('#noteStatus');if(st)st.textContent='Saving…';
+  noteTimer=setTimeout(()=>{
+    const done=()=>{const s=$('#noteStatus');if(s)s.textContent=store.nc?'Saved and synced':'Saved on this device'};
+    if(store.nc)queueWrite('n'+id,()=>store.nc.doc(id).set({text,updatedAt:new Date().toISOString()}).then(done));else done();
+  },700);
+}
+async function connect(){
+  try{
+    if(typeof claude==='undefined'||!claude.use)return;
+    const [db,user]=await Promise.all([claude.use('db'),claude.use('user')]);
+    if(!db||!user)return;
+    const id=await user.id();if(!id)return;
+    const base=db.doc('data/users/'+id+'/profile');
+    const sc=base.collection('saved'),nc=base.collection('notes');
+    const [s,n]=await Promise.all([sc.get(),nc.get()]);
+    const rs={},rn={};
+    s.docs.forEach(d=>{if(d.exists)rs[d.id]=d.data()});
+    n.docs.forEach(d=>{if(d.exists)rn[d.id]=(d.data()||{}).text||''});
+    store.sc=sc;store.nc=nc;
+    for(const k of Object.keys(store.saved))if(!rs[k])queueWrite('s'+k,()=>sc.doc(k).set(store.saved[k]));
+    for(const k of Object.keys(store.notes))if(rn[k]===undefined&&store.notes[k])queueWrite('n'+k,()=>nc.doc(k).set({text:store.notes[k],updatedAt:new Date().toISOString()}));
+    store.saved={...store.saved,...rs};store.notes={...store.notes,...rn};persist();
+    const cc=base.collection('chats');
+    try{const cs=await cc.get();const rc={};cs.docs.forEach(d=>{if(d.exists)rc[d.id]=(d.data()||{}).turns||[]});
+      for(const k of Object.keys(chat.turns))if(!rc[k]&&chat.turns[k]?.length)queueWrite('c'+k,()=>cc.doc(k).set({turns:chat.turns[k],updatedAt:new Date().toISOString()}));
+      if(!chat.busy){chat.turns={...chat.turns,...rc};LS.set('fr-chats',chat.turns)}}catch{}
+    chat.col=cc;
+    $('#syncNote').textContent='Your saved problems and notes sync across your devices.';
+    if(!document.activeElement||document.activeElement.tagName!=='TEXTAREA')render();
+    /* problems you added: live, so researched ones appear after the morning update */
+    const subc=db.collection('submissions');store.subc=subc;let first=true;
+    subc.onSnapshot(snap=>{
+      const remote={};snap.docs.forEach(d=>{if(d.exists)remote[d.id]=d.data()});
+      if(first&&!snap.metadata.fromCache){first=false;for(const k of Object.keys(store.subs))if(!remote[k])queueWrite('u'+k,()=>subc.doc(k).set(store.subs[k]))}
+      store.subs={...store.subs,...remote};LS.set('fr-subs',store.subs);
+      const a=document.activeElement;if(!a||!['TEXTAREA','INPUT','SELECT'].includes(a.tagName))render();
+    },()=>{});
+  }catch(e){$('#syncNote').textContent='Saved problems are kept on this device.'}
+}
+
+/* helpers */
+function fmt(v,u){const n=Number(v);const s=Number.isInteger(n)?n.toLocaleString():n.toLocaleString(undefined,{maximumFractionDigits:2});return u==='$'?'$'+s:u==='%'?s+'%':u==='¢'?s+'¢':u==='M'?s+'M':s}
+function gauges(sc,cls=''){
+  const rows=[['Reach',sc?.reach],['Growth',sc?.growth],['Solvable',sc?.solvable]];
+  return `<div class="gauges ${cls}">${rows.map(([l,v])=>`<div class="g"><span>${l}</span><span class="bar" role="img" aria-label="${l} ${esc(v)} out of 10"><i style="width:${Math.max(0,Math.min(10,+v||0))*10}%"></i></span><output>${esc(v)}</output></div>`).join('')}</div>`;
+}
+function saveBtn(t){if(t.mine)return `<button class="btn" type="button" data-remove="${esc(t.id)}">Remove</button>`;const on=!!store.saved[t.id];return `<button class="btn save" type="button" data-save="${esc(t.id)}" aria-pressed="${on}">${on?STAR:STAR_O}${on?'Saved':'Save'}</button>`}
+function metaLine(t){return `<div class="meta"><span class="cat">${esc(t.category)}</span><span>${esc(t.region)}</span><span class="trend ${esc(t.trend)}">${esc(TREND[t.trend]||t.trend)}</span></div>`}
+function storyHTML(t,lead,extra=''){
+  return `<article class="story${lead?' lead':''}">${metaLine(t)}
+  <h2><a href="#p-${esc(t.id)}">${esc(t.title)}</a></h2><p class="dek">${esc(t.dek)}</p>
+  <div class="srow"><div class="key"><b>${esc(t.keyStat?.value)}</b><span>${esc(t.keyStat?.label)}</span></div>${gauges(t.scores)}${saveBtn(t)}</div>
+  ${t.whyNow?`<p class="why"><b>Why now:</b> ${esc(t.whyNow)}</p>`:''}${extra}</article>`;
+}
+function topicById(id){
+  if(store.subs[id])return subTopic(store.subs[id]);
+  return feed?.topics.find(t=>t.id===id)||(feed?.personal||[]).find(t=>t.id===id)||store.saved[id]?.topic||null;
+}
+function whereIs(id){return store.subs[id]?'saved':feed?.topics.some(t=>t.id===id)?'today':(feed?.personal||[]).some(t=>t.id===id)?'personal':'saved'}
+const BACK={today:"today's list",personal:'personal problems',saved:'my problems'};
+
+function addFormHTML(){
+  if(!showAdd)return `<div class="addbar"><h3>Have a problem of your own?</h3><button class="btn pri" type="button" id="openAdd">+ Add a problem</button></div>`;
+  return `<form class="addf" id="addForm">
+    <label>What's the problem?<input name="title" required maxlength="140" placeholder="e.g. My earbuds keep disconnecting from my laptop"></label>
+    <label>What bugs you about it? <span class="small">(optional)</span><textarea name="details" maxlength="1000" placeholder="When it happens, what you've tried, why it's annoying…"></textarea></label>
+    <label>Category<select name="category">${CATS.map(c=>`<option>${c}</option>`).join('')}</select></label>
+    <div class="acts"><button class="btn pri" type="submit">Add to my problems</button><button class="btn" type="button" id="closeAdd">Cancel</button></div>
+    <p class="small">It goes straight into <b>My problems</b>. Each morning, Claude researches new ones and fills in the evidence, scores and idea sparks.${store.subc?'':' (Research needs syncing, which isn’t available in this view.)'}</p>
+  </form>`;
+}
+
+/* views */
+function viewToday(kind='today'){
+  if(!feed)return `<p class="empty" id="loadMsg">Loading today's problems…</p>`;
+  const src=kind==='personal'?(feed.personal||[]):feed.topics;
+  const cats=[...new Set(src.map(t=>t.category))].sort(),regs=[...new Set(src.map(t=>t.region))].sort();
+  if(!cats.includes(filt.cat))filt.cat='all';if(!regs.includes(filt.region))filt.region='all';
+  const opt=(v,l,cur)=>`<option value="${esc(v)}"${v===cur?' selected':''}>${esc(l)}</option>`;
+  const q=filt.q.trim().toLowerCase();
+  const head=kind==='personal'?`<p class="intro">Small, everyday problems that one person runs into, but huge numbers of people share. Refreshed each morning.</p>${addFormHTML()}`:'';
+  if(kind==='personal'&&!src.length)return head+`<p class="empty">Personal problems arrive with the next morning's edition.</p>`;
+  let list=src.map((t,i)=>({t,i})).filter(({t})=>
+    (filt.cat==='all'||t.category===filt.cat)&&(filt.region==='all'||t.region===filt.region)&&(filt.trend==='all'||t.trend===filt.trend)&&
+    (!q||[t.title,t.dek,t.frustration,t.category,t.who].join(' ').toLowerCase().includes(q)));
+  if(filt.sort!=='rank')list.sort((a,b)=>(b.t.scores?.[filt.sort]||0)-(a.t.scores?.[filt.sort]||0)||a.i-b.i);
+  const plain=filt.sort==='rank'&&!q&&filt.cat==='all'&&filt.region==='all'&&filt.trend==='all';
+  return `${head}<div class="filters" role="search">
+    <input id="fq" type="search" placeholder="Search problems" aria-label="Search problems" value="${esc(filt.q)}">
+    <select id="fcat" aria-label="Category">${opt('all','All categories',filt.cat)}${cats.map(c=>opt(c,c,filt.cat)).join('')}</select>
+    <select id="freg" aria-label="Region">${opt('all','All regions',filt.region)}${regs.map(c=>opt(c,c,filt.region)).join('')}</select>
+    <select id="ftr" aria-label="Trend">${opt('all','Any trend',filt.trend)}${Object.entries(TREND).map(([k,l])=>opt(k,l,filt.trend)).join('')}</select>
+    <select id="fsort" aria-label="Sort by">${opt('rank','Sort: front page order',filt.sort)}${opt('reach','Sort: most people affected',filt.sort)}${opt('growth','Sort: fastest growing',filt.sort)}${opt('solvable','Sort: most solvable',filt.sort)}</select>
+  </div><div id="list">${list.length?list.map(({t},k)=>storyHTML(t,plain&&k===0)).join(''):'<p class="empty">No problems match those filters.</p>'}</div>`;
+}
+function noteLine(id){const n=store.notes[id];return n?`<p class="note-line"><b>Your notes:</b> ${esc(n.slice(0,180))}${n.length>180?'…':''}</p>`:''}
+function pendingCard(s){
+  return `<div class="pending"><span class="pill">Waiting for research</span><h2><a href="#p-${esc(s.id)}">${esc(s.title)}</a></h2>
+  ${s.details?`<p>${esc(s.details)}</p>`:''}<p class="small">${esc(s.category||'Other')} · added ${esc(new Date(s.createdAt).toLocaleDateString())}. Claude will add the evidence, scores and ideas in the next morning update.</p>
+  ${noteLine(s.id)}<button class="btn" type="button" data-remove="${esc(s.id)}">Remove</button></div>`;
+}
+function viewSaved(){
+  const subs=Object.values(store.subs).sort((a,b)=>String(b.createdAt).localeCompare(String(a.createdAt)));
+  const items=Object.values(store.saved).sort((a,b)=>String(b.savedAt).localeCompare(String(a.savedAt)));
+  const mine=`<h3 class="secth">Problems you added</h3>${addFormHTML()}${subs.length?subs.map(s=>s.topic?storyHTML(subTopic(s),false,`<p class="why"><span class="pill">Added by you</span></p>${noteLine(s.id)}`):pendingCard(s)).join(''):'<p class="intro">Nothing added yet.</p>'}`;
+  const saved=`<h3 class="secth">Saved from the daily lists</h3>${items.length?items.map(r=>{const old=feed&&!feed.topics.some(t=>t.id===r.topic.id)&&!(feed.personal||[]).some(t=>t.id===r.topic.id);
+    return storyHTML(r.topic,false,`${old?`<p class="why">From the ${esc(r.edition)} edition.</p>`:''}${noteLine(r.topic.id)}`)}).join(''):'<p class="intro">Tap <b>Save</b> on any problem to keep it here, even after it leaves the daily list.</p>'}`;
+  return mine+saved;
+}
+function viewTopic(id){
+  const t=topicById(id);
+  if(!t)return feed?`<a class="back" href="#today">← Back to today</a><p class="empty">That problem isn't in today's edition.</p>`:`<p class="empty">Loading…</p>`;
+  if(t.pending){const s=store.subs[id];return `<a class="back" href="#saved">← Back to my problems</a>
+    <div class="dgrid"><article><div class="dhead"><span class="pill">Waiting for research</span><h1>${esc(s.title)}</h1>${s.details?`<p class="dek">${esc(s.details)}</p>`:''}<p class="why">Claude will research this in the next morning update: who else has it, the evidence, why it happens, what exists, and idea sparks.</p></div>${chatHTML({...t,frustration:s.details})}</article>
+    <aside class="side"><div class="panel"><h4><label for="notes">Solution notebook</label></h4><textarea id="notes" data-id="${esc(id)}" placeholder="Ideas, who to ask, what you'd build first…">${esc(store.notes[id]||'')}</textarea><div class="status" id="noteStatus" aria-live="polite"></div><button class="btn" type="button" data-remove="${esc(id)}" style="margin-top:10px">Remove</button></div></aside></div>`}
+  const src=i=>{const s=t.sources?.[i];return s?` <a href="${href(s.url)}" target="_blank" rel="noopener">Source</a>`:''};
+  const max=Math.max(...(t.chart?.rows||[]).map(r=>+r.value||0),1);
+  const chart=t.chart?`<section class="blk"><h3>By the numbers</h3><div class="chart"><h4>${esc(t.chart.title)}</h4>${t.chart.rows.map(r=>`<div class="crow"><span>${esc(r.label)}</span><span class="bar"><i style="width:${(+r.value||0)/max*100}%"></i></span><output>${esc(fmt(r.value,t.chart.unit))}</output></div>`).join('')}${t.sources?.[t.chart.src]?`<p class="small">Source: <a href="${href(t.sources[t.chart.src].url)}" target="_blank" rel="noopener">${esc(t.sources[t.chart.src].title)}</a></p>`:''}</div></section>`:'';
+  const w=whereIs(id);
+  return `<a class="back" href="#${w}">← Back to ${BACK[w]}</a>
+  <div class="dgrid"><article>
+    <div class="dhead">${metaLine(t)}<h1>${esc(t.title)}</h1><p class="dek">${esc(t.dek)}</p>${t.whyNow?`<p class="why"><b>Why now:</b> ${esc(t.whyNow)}</p>`:''}</div>
+    <section class="blk"><h3>What people don't like</h3><p>${esc(t.frustration)}</p>
+      ${t.voices?.length?`<ul class="voices">${t.voices.map(v=>`<li>${esc(v)}</li>`).join('')}</ul><p class="small">Paraphrased from news reports, reviews and posts.</p>`:''}</section>
+    ${t.stats?.length?`<section class="blk"><h3>Proof it's real</h3><div class="stats">${t.stats.map(s=>`<div class="stat"><b>${esc(s.value)}</b><span>${esc(s.label)}</span><br>${src(s.src)}</div>`).join('')}</div></section>`:''}
+    ${chart}
+    <section class="blk"><h3>Who it affects</h3><p>${esc(t.who)}</p></section>
+    <section class="blk"><h3>Why it happens</h3><ul>${(t.causes||[]).map(c=>`<li>${esc(c)}</li>`).join('')}</ul></section>
+    <section class="blk"><h3>What already exists, and where it falls short</h3><div class="exist">${(t.existing||[]).map(e=>`<div><b>${esc(e.name)}</b><span>${esc(e.gap)}</span></div>`).join('')}</div></section>
+    <section class="blk"><h3>Idea sparks</h3><ul class="sparks">${(t.sparks||[]).map(s=>`<li>${esc(s)}</li>`).join('')}</ul></section>
+    ${chatHTML(t)}
+    <section class="blk"><h3>Sources</h3><ul class="srcs">${(t.sources||[]).map(s=>`<li><a href="${href(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a></li>`).join('')}</ul></section>
+  </article>
+  <aside class="side">
+    <div class="panel"><div class="key"><b>${esc(t.keyStat?.value)}</b><span>${esc(t.keyStat?.label)}</span></div></div>
+    <div class="panel big"><h4>Scores</h4>${gauges(t.scores)}<p>Reach: how many people it affects. Growth: how fast it's getting worse. Solvable: how realistic a fix is for a small team.</p></div>
+    <button class="btn pri" type="button" id="jumpChat">Solve this with Claude ↓</button>
+    <div class="panel">${saveBtn(t)}<h4 style="margin-top:14px"><label for="notes">Solution notebook</label></h4>
+      <textarea id="notes" data-id="${esc(t.id)}" placeholder="Ideas, who to ask, what you'd build first…">${esc(store.notes[t.id]||'')}</textarea>
+      <div class="status" id="noteStatus" aria-live="polite"></div></div>
+  </aside></div>`;
+}
+
+/* router */
+function route(){const h=location.hash.slice(1);return h.startsWith('p-')?{v:'topic',id:h.slice(2)}:h==='saved'?{v:'saved'}:h==='personal'?{v:'personal'}:{v:'today'}}
+function render(){
+  const r=route(),focusId=document.activeElement?.id,pos=document.activeElement?.selectionStart;
+  for(const [tab,v] of [['#tabToday','today'],['#tabPersonal','personal'],['#tabSaved','saved']]){const el=$(tab);if(r.v===v)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current')}
+  $('#savedCount').textContent=Object.keys(store.saved).length+Object.keys(store.subs).length;
+  $('#view').innerHTML=r.v==='topic'?viewTopic(r.id):r.v==='saved'?viewSaved():viewToday(r.v);
+  if(focusId==='fq'){const f=$('#fq');if(f){f.focus();try{f.setSelectionRange(pos,pos)}catch{}}}
+}
+let lastView='';
+window.addEventListener('hashchange',()=>{render();const v=location.hash;if(v!==lastView){window.scrollTo(0,0);lastView=v}});
+
+/* events (delegated) */
+$('#view').addEventListener('click',e=>{
+  if(e.target.closest('#jumpChat')){$('#chatBox')?.scrollIntoView({behavior:'smooth',block:'start'});return}
+  const box=$('#chatBox'),ct=box&&topicById(box.dataset.id);
+  const q=e.target.closest('[data-quick]');
+  if(q&&ct){const [label,prompt]=QUICK[+q.dataset.quick];sendChat(ct,prompt,label);return}
+  if(e.target.closest('#stopChat')){chat.ctl?.abort();return}
+  const cl=e.target.closest('#clearChat');
+  if(cl&&ct){if(cl.dataset.confirm!=='1'){cl.dataset.confirm='1';cl.textContent='Tap again to clear';return}chat.turns[ct.id]=[];delete chat.err[ct.id];saveChat(ct.id);paintChat();return}
+  const tn=e.target.closest('[data-tonote]');
+  if(tn&&ct){const m=(chat.turns[ct.id]||[])[+tn.dataset.tonote];if(!m)return;
+    const cur=store.notes[ct.id]||'';const next=(cur?cur.trimEnd()+'\n\n':'')+'From Claude:\n'+m.content.replace(/\*\*(.+?)\*\*/g,'$1');
+    const ta=$('#notes');if(ta)ta.value=next;setNote(ct.id,next);tn.textContent='Added ✓';tn.disabled=true;return}
+  if(e.target.closest('#openAdd')){showAdd=true;render();$('#addForm input')?.focus();return}
+  if(e.target.closest('#closeAdd')){showAdd=false;render();return}
+  const rm=e.target.closest('[data-remove]');
+  if(rm){const id=rm.dataset.remove;if(rm.dataset.confirm!=='1'){rm.dataset.confirm='1';rm.textContent='Tap again to remove';return}
+    removeSubmission(id);if(location.hash==='#p-'+id)location.hash='#saved';else render();return}
+  const b=e.target.closest('[data-save]');if(!b)return;const t=topicById(b.dataset.save);if(t)toggleSave(t)});
+$('#view').addEventListener('keydown',e=>{if(e.target.id==='askBox'&&e.key==='Enter'&&!e.shiftKey){e.preventDefault();$('#askForm')?.requestSubmit()}});
+$('#view').addEventListener('submit',e=>{
+  if(e.target.id==='askForm'){e.preventDefault();const box=$('#chatBox'),ct=box&&topicById(box.dataset.id),v=$('#askBox').value.trim();if(ct&&v)sendChat(ct,v);return}
+  if(e.target.id!=='addForm')return;e.preventDefault();
+  const f=new FormData(e.target),title=String(f.get('title')||'').trim();if(!title)return;
+  addSubmission(title,String(f.get('details')||'').trim(),String(f.get('category')||'Other'));
+  showAdd=false;if(location.hash!=='#saved')location.hash='#saved';else render();
+});
+$('#view').addEventListener('input',e=>{
+  const el=e.target;
+  if(el.id==='fq'){filt.q=el.value;render()}
+  else if(el.id==='notes'){setNote(el.dataset.id,el.value)}
+});
+$('#view').addEventListener('change',e=>{const m={fcat:'cat',freg:'region',ftr:'trend',fsort:'sort'}[e.target.id];if(m){filt[m]=e.target.value;render()}});
+
+/* load */
+function showEdition(){
+  const d=new Date(feed.edition+'T12:00:00');
+  $('#edDate').textContent=isNaN(d)?feed.edition:d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'});
+  $('#edNote').textContent=feed.topics.length+' news problems · '+(feed.personal||[]).length+' personal';
+}
+render();
+const cached=LS.get('fr-feed',null);
+fetch('feed.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(j=>{feed=j;LS.set('fr-feed',j);showEdition();render()})
+  .catch(()=>{if(cached){feed=cached;showEdition();render();$('#edNote').textContent='Showing your last loaded edition'}else{$('#view').innerHTML='<p class="empty">Couldn’t load today’s edition. Try again in a moment.</p>'}});
+connect();
+}
+</script>
+</body>
+</html>

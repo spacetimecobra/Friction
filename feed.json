@@ -1,0 +1,2556 @@
+{
+ "edition": "2026-11-25",
+ "updated": "2026-11-25T12:40:00-06:00",
+ "note": "Picked from recent news, surveys, reviews and forum complaints. Scores are Claude's estimates from the evidence, 1–10.",
+ "topics": [
+  {
+   "id": "flight-trust",
+   "title": "Flyers don't trust their Thanksgiving flight will actually leave on time",
+   "dek": "A nationwide ground stop in mid-November disrupted about 46,000 flights, days before the busiest travel week of the year.",
+   "category": "Travel",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 7,
+    "growth": 6,
+    "solvable": 4
+   },
+   "keyStat": {
+    "value": "46,000",
+    "label": "flights canceled or delayed by one ground stop"
+   },
+   "whyNow": "Thanksgiving travel runs Nov 24–30, and the ground stop is still fresh in people's minds.",
+   "frustration": "It isn't only the delay itself. Travelers can't tell how fragile their trip is until it breaks: one system failure cascades across the whole country, rebooking options vanish at peak times, and they end up refreshing flight status apps for hours with no real plan B.",
+   "voices": [
+    "Travelers say they check their flight status over and over in the days before leaving, just in case.",
+    "People heading home for the holiday say a cancellation doesn't mean being late. It means missing the dinner.",
+    "Travel companies point out that holiday delays aren't much worse than usual, but people's patience is much lower."
+   ],
+   "stats": [
+    {
+     "value": "18,000",
+     "label": "flights canceled in the ground stop",
+     "src": 0
+    },
+    {
+     "value": "28,000",
+     "label": "flights delayed in the same event",
+     "src": 0
+    },
+    {
+     "value": "81.5M",
+     "label": "Americans traveling 50+ miles, Nov 24–30",
+     "src": 1
+    },
+    {
+     "value": "5.96M",
+     "label": "expected to fly domestically",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "How Americans travel for Thanksgiving 2026 (millions)",
+    "unit": "M",
+    "rows": [
+     {
+      "label": "Car",
+      "value": 72.9
+     },
+     {
+      "label": "Plane",
+      "value": 5.96
+     },
+     {
+      "label": "Bus, train or cruise",
+      "value": 2.6
+     }
+    ],
+    "src": 1
+   },
+   "who": "Holiday flyers, especially people with connections or one flight a day on their route. Drivers face packed highways and storms instead.",
+   "causes": [
+    "Aging air-traffic systems are being blamed, and one failure spreads nationwide.",
+    "Airlines run tight schedules with few spare planes or crews at peak times.",
+    "Delays early in the day cascade into the evening.",
+    "Questions about the FAA's new software rollout add uncertainty, though the FAA says the two weren't related."
+   ],
+   "existing": [
+    {
+     "name": "Airline apps and flight trackers",
+     "gap": "They report a problem after it happens, not how risky your trip is beforehand."
+    },
+    {
+     "name": "Automatic rebooking",
+     "gap": "At peak times the next open seat can be a day or more away."
+    },
+    {
+     "name": "Refund rules for cancellations",
+     "gap": "Money back doesn't get you to dinner."
+    }
+   ],
+   "sparks": [
+    "What if you could see the night before how likely your specific itinerary is to break?",
+    "Could a 'plan B' button hold a backup option (a train, a bus, a different airport) without paying in full?",
+    "How could families coordinate when one person's flight falls apart?"
+   ],
+   "sources": [
+    {
+     "title": "Ground stop sparks Thanksgiving travel concerns (Gray DC)",
+     "url": "https://www.wowt.com/2026/11/17/ground-stop-sparks-thanksgiving-travel-concerns/?outputType=amp"
+    },
+    {
+     "title": "AAA: Over 81 million Americans expected to travel for Thanksgiving (Fox Weather)",
+     "url": "https://www.foxweather.com/lifestyle/more-than-81-million-americans-expected-travel-thanksgiving-despite-fewer-drivers-flyers"
+    },
+    {
+     "title": "What to know about Thanksgiving air travel after nationwide ground stop (GMA)",
+     "url": "https://www.goodmorningamerica.com/travel/story/thanksgiving-air-travel-after-nationwide-ground-stop-138180470"
+    }
+   ]
+  },
+  {
+   "id": "thanksgiving-groceries",
+   "title": "Thanksgiving groceries cost more, and every price tracker says something different",
+   "dek": "Estimates for the same holiday meal range from $35 to $90, so shoppers can't tell what a fair price is or where to buy.",
+   "category": "Food & money",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 9,
+    "growth": 5,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "+6.3%",
+    "label": "Farm Bureau's meal for 10, the first rise since 2022"
+   },
+   "whyNow": "Thanksgiving is tomorrow, and diesel and fertilizer costs tied to the Iran war are pushing food prices up.",
+   "frustration": "People feel their grocery bill climbing, but the numbers they hear conflict. One report says the meal got slightly cheaper and another says it's up 11%. Prices on single items like fresh turkey and cranberries swing hard, and it's unclear which store is actually cheapest for their own list.",
+   "voices": [
+    "Shoppers say the total at checkout keeps surprising them, even when headlines say prices are steady.",
+    "People complain that store 'meal bundles' look cheap but leave out things they actually need.",
+    "Families say they're comparing store flyers by hand to find the cheapest turkey."
+   ],
+   "stats": [
+    {
+     "value": "$58.63",
+     "label": "Farm Bureau feast for 10, up $3.45",
+     "src": 0
+    },
+    {
+     "value": "~11%",
+     "label": "rise in a typical dinner, per a NielsenIQ-based analysis",
+     "src": 1
+    },
+    {
+     "value": "$5.96",
+     "label": "average gallon of diesel, up 58% in a year",
+     "src": 0
+    },
+    {
+     "value": "$23.68",
+     "label": "16-lb turkey, up from $21.50",
+     "src": 0
+    }
+   ],
+   "chart": {
+    "title": "Same holiday, different price tags (menus differ)",
+    "unit": "$",
+    "rows": [
+     {
+      "label": "Walmart feast for 10",
+      "value": 35
+     },
+     {
+      "label": "Aldi feast for 10",
+      "value": 39
+     },
+     {
+      "label": "Farm Bureau, for 10",
+      "value": 58.63
+     },
+     {
+      "label": "Wells Fargo, for 10",
+      "value": 78.93
+     },
+     {
+      "label": "PwC, average family",
+      "value": 90
+     }
+    ],
+    "src": 0
+   },
+   "who": "Nearly every household cooking a holiday meal, hardest on large families and anyone on a tight food budget.",
+   "causes": [
+    "High diesel prices make it cost more to move and process food.",
+    "Smaller cranberry harvests and strong turkey demand raise specific items.",
+    "Years of earlier increases stack up, so even a 'flat' year feels expensive.",
+    "Stores use loss-leader deals that make true price comparison hard."
+   ],
+   "existing": [
+    {
+     "name": "Store flyers and loyalty apps",
+     "gap": "Each one covers only its own store."
+    },
+    {
+     "name": "Annual meal-cost trackers",
+     "gap": "Their menus don't match yours and come out once a year."
+    },
+    {
+     "name": "Retailer meal bundles",
+     "gap": "Often missing items, so the low price is misleading."
+    }
+   ],
+   "sparks": [
+    "What if you typed your real shopping list and saw which nearby store is cheapest for all of it?",
+    "Could a tracker show your own grocery inflation instead of a national average?",
+    "How might neighbors split bulk buys for holiday staples?"
+   ],
+   "sources": [
+    {
+     "title": "Here's how much more Americans are expected to pay for Thanksgiving dinners (AP via WCAX)",
+     "url": "https://www.wcax.com/2026/11/18/heres-how-much-more-americans-are-expected-pay-thanksgiving-dinners-this-year/?outputType=amp"
+    },
+    {
+     "title": "2026 Thanksgiving grocery costs are up more than 10%, analysis finds (Scripps)",
+     "url": "https://www.scrippsnews.com/life/food-and-drink/2026-thanksgiving-grocery-costs-are-up-more-than-10-analysis-finds"
+    },
+    {
+     "title": "Thanksgiving dinner cost 2026 (Fortune / The Conversation)",
+     "url": "https://fortune.com/2026/11/19/thanksgiving-dinner-cost-2026-turkey-prices/"
+    },
+    {
+     "title": "Thanksgiving food forecast (ABC7)",
+     "url": "https://abc7chicago.com/story/thanksgiving-food-forecast-prices-going-are-bright-spots/19943254/"
+    }
+   ]
+  },
+  {
+   "id": "porch-pirates",
+   "title": "Holiday packages disappear from porches before anyone gets home",
+   "dek": "Three in 10 American adults have now had a package stolen, and nearly half of thefts happen in November and December.",
+   "category": "Home & safety",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 8,
+    "growth": 5,
+    "solvable": 7
+   },
+   "keyStat": {
+    "value": "30%",
+    "label": "of US adults have had a package stolen, up from 24%"
+   },
+   "whyNow": "Black Friday and Cyber Monday deliveries start this week, with adults expecting about 28 packages each from October to December.",
+   "frustration": "Packages sit on the doorstep for hours while people are at work or school. A doorbell camera records the theft but doesn't stop it, and getting a replacement means long calls with the retailer, often too late for the gift.",
+   "voices": [
+    "Victims say their video doorbell caught the thief clearly, and it changed nothing.",
+    "People say they now order less online or only from stores with easy refunds.",
+    "Some say a stolen gift meant giving it late, or not at all."
+   ],
+   "stats": [
+    {
+     "value": "~80M",
+     "label": "Americans have ever had a package stolen",
+     "src": 0
+    },
+    {
+     "value": "47.7M",
+     "label": "estimated victims in the last year",
+     "src": 0
+    },
+    {
+     "value": "$12.8B",
+     "label": "lost to package theft in 2025",
+     "src": 1
+    },
+    {
+     "value": "23%",
+     "label": "of victims now order online less often",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "Share of US adults who've ever had a package stolen",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "2025 survey",
+      "value": 24
+     },
+     {
+      "label": "2026 survey",
+      "value": 30
+     }
+    ],
+    "src": 0
+   },
+   "who": "Anyone who isn't home during delivery hours, especially apartment dwellers and houses near the street.",
+   "causes": [
+    "Deliveries peak while most people are away.",
+    "Boxes left in plain sight make easy targets.",
+    "Thefts are small and rarely investigated, so there's little risk for thieves."
+   ],
+   "existing": [
+    {
+     "name": "Video doorbells",
+     "gap": "They record the theft instead of preventing it."
+    },
+    {
+     "name": "Lockers and in-store pickup",
+     "gap": "An extra trip, and not always nearby."
+    },
+    {
+     "name": "Package tracking",
+     "gap": "It tells you it arrived, not that it's still there."
+    }
+   ],
+   "sparks": [
+    "What if neighbors who are home could safely hold packages for each other?",
+    "Could deliveries be timed to when someone is actually home?",
+    "Is there a cheap, renter-friendly lockbox that couriers will actually use?"
+   ],
+   "sources": [
+    {
+     "title": "2026 Package Theft Report and Statistics (Security.org)",
+     "url": "https://security.org/package-theft/annual-report/"
+    },
+    {
+     "title": "Survey: Package theft totaled $12.8 billion in 2025 (Chain Store Age)",
+     "url": "https://chainstoreage.com/survey-package-theft-totaled-128-billion-2025"
+    }
+   ]
+  },
+  {
+   "id": "return-fees",
+   "title": "Sending back an online order now comes with a surprise fee",
+   "dek": "Nearly three-quarters of retailers now charge for at least some returns, and shoppers say unexpected fees are the worst part.",
+   "category": "Shopping",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 7,
+    "growth": 6,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "72%",
+    "label": "of retailers charge for some returns, up from 66%"
+   },
+   "whyNow": "Holiday shopping starts this week, and return season follows right after.",
+   "frustration": "Shoppers find out about the return fee only when they try to send something back. Policies are buried and differ by store, and sometimes even by item, so a wrong size can mean paying to give the product back.",
+   "voices": [
+    "Shoppers say they only learned about the fee after printing the return label.",
+    "People now read return policies before buying anything, which slows every purchase down.",
+    "Some say a single return fee was enough to stop them shopping at that store."
+   ],
+   "stats": [
+    {
+     "value": "92%",
+     "label": "say return fees change how they shop online",
+     "src": 1
+    },
+    {
+     "value": "42%",
+     "label": "name unexpected fees as their top returns pain",
+     "src": 2
+    },
+    {
+     "value": "59%",
+     "label": "would consider avoiding a store that charges",
+     "src": 3
+    },
+    {
+     "value": "37%",
+     "label": "of retailers with fees say they lost customers",
+     "src": 4
+    }
+   ],
+   "chart": {
+    "title": "Biggest pain points when returning (% of US shoppers)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Unexpected return fees",
+      "value": 42
+     },
+     {
+      "label": "Shipping hassles",
+      "value": 41
+     },
+     {
+      "label": "Unclear return policies",
+      "value": 32
+     }
+    ],
+    "src": 2
+   },
+   "who": "Online shoppers, especially for clothes and shoes where sizing is a guess.",
+   "causes": [
+    "Processing a return can cost retailers 20–65% of the item's price.",
+    "Shipping costs and tariffs went up.",
+    "Retailers want to discourage serial returners and fraud."
+   ],
+   "existing": [
+    {
+     "name": "Free in-store drop-off",
+     "gap": "Only helps if a store is nearby."
+    },
+    {
+     "name": "Box-free return points",
+     "gap": "Limited to certain retailers."
+    },
+    {
+     "name": "Reading the policy first",
+     "gap": "Every store words it differently."
+    }
+   ],
+   "sparks": [
+    "What if a browser tool showed a store's real return cost on the product page?",
+    "Could better fit prediction cut the returns in the first place?",
+    "Could friends or neighbors trade items instead of returning them?"
+   ],
+   "sources": [
+    {
+     "title": "Nearly three-quarters of retailers charge for at least some returns (EMARKETER)",
+     "url": "https://www.emarketer.com/content/retailers-return-rate-trends-2025-nrf-report"
+    },
+    {
+     "title": "Return policies are increasingly deciding where Americans shop online (ConsumerAffairs)",
+     "url": "https://www.consumeraffairs.com/news/return-policies-are-increasingly-deciding-where-americans-shop-online-091426.html"
+    },
+    {
+     "title": "Survey: Unexpected fees tops list of returns' pain points (Chain Store Age)",
+     "url": "https://chainstoreage.com/survey-unexpected-fees-tops-list-returns-pain-points"
+    },
+    {
+     "title": "Ecommerce trends: returns charges (Digital Commerce 360)",
+     "url": "https://www.digitalcommerce360.com/2026/01/22/ecommerce-trends-returns-charges-ai/"
+    },
+    {
+     "title": "Retailers charging for mailed returns (RetailWire)",
+     "url": "https://retailwire.com/?p=307086"
+    }
+   ]
+  },
+  {
+   "id": "power-bills",
+   "title": "Electric bills keep climbing, and people suspect they're paying for AI data centers",
+   "dek": "About one in six US households is behind on utility bills, while data-center demand pushes up costs in several regions.",
+   "category": "Energy & money",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 9,
+    "growth": 7,
+    "solvable": 3
+   },
+   "keyStat": {
+    "value": "1 in 6",
+    "label": "US households behind on utility bills"
+   },
+   "whyNow": "Winter heating season is starting, and data centers are now a major local political fight.",
+   "frustration": "Bills go up month after month, and people can't see why or do much about it. The monthly statement doesn't say how much of the increase comes from new grid costs, and they have no say in the deals utilities strike with big tech companies.",
+   "voices": [
+    "Residents say their bill went up even though their usage didn't.",
+    "People living near planned data centers say they'll pay for power they never use.",
+    "Renters say they can't add solar or upgrade insulation, so they're stuck."
+   ],
+   "stats": [
+    {
+     "value": "~20¢",
+     "label": "average residential price per kWh in 2026, up from ~13¢ in 2016",
+     "src": 0
+    },
+    {
+     "value": "$25B",
+     "label": "owed by US households on utility bills",
+     "src": 1
+    },
+    {
+     "value": "$168–216",
+     "label": "estimated extra per year for Maryland households",
+     "src": 2
+    },
+    {
+     "value": "71%",
+     "label": "would oppose a data center in their area",
+     "src": 3
+    }
+   ],
+   "chart": {
+    "title": "Average US residential electricity price (¢ per kWh)",
+    "unit": "¢",
+    "rows": [
+     {
+      "label": "2016",
+      "value": 13
+     },
+     {
+      "label": "2026",
+      "value": 20
+     }
+    ],
+    "src": 0
+   },
+   "who": "Every household with an electric bill, hardest on renters and low-income families in data-center regions like the PJM grid (Illinois to North Carolina) and Texas.",
+   "causes": [
+    "Data centers add huge demand, which drives up capacity costs that households help pay.",
+    "Aging grid and transmission upgrades get passed on to customers.",
+    "Fuel prices and extreme weather strain the system."
+   ],
+   "existing": [
+    {
+     "name": "State rules making data centers pay their share",
+     "gap": "Few states have them, and they help only gradually."
+    },
+    {
+     "name": "Budget billing and assistance programs",
+     "gap": "They spread the cost out but don't lower it."
+    },
+    {
+     "name": "Rooftop solar",
+     "gap": "Out of reach for renters."
+    }
+   ],
+   "sparks": [
+    "What if your bill were translated into plain English, line by line, showing what's actually rising?",
+    "Could an app tell renters the cheapest hours to run big appliances?",
+    "How could neighbors track and compare bill increases in their area?"
+   ],
+   "sources": [
+    {
+     "title": "What AI data centers could mean for your electric bill (Penn State IEE)",
+     "url": "https://iee.psu.edu/news/blog/what-ai-data-centers-could-mean-your-electric-bill"
+    },
+    {
+     "title": "Data center power demands are contributing to higher energy bills (EESI)",
+     "url": "https://eesi.org/articles/view/data-center-power-demands-are-contributing-to-higher-energy-bills"
+    },
+    {
+     "title": "AI data centers are hiking electric bills for millions (Tom's Guide)",
+     "url": "https://www.tomsguide.com/ai/ai-data-centers-are-hiking-electric-bills-for-millions-even-if-theres-not-one-in-your-town"
+    },
+    {
+     "title": "How data centres affect electricity prices, and whom (CEPR VoxEU)",
+     "url": "https://cepr.org/index%2ephp/voxeu/columns/how-data-centres-affect-electricity-prices-and-whom"
+    }
+   ]
+  },
+  {
+   "id": "tip-screens",
+   "title": "Tip screens ask for 20% even at self-serve counters",
+   "dek": "Two-thirds of consumers say they're fed up with tipping, and the share of takeout orders that get a tip keeps falling.",
+   "category": "Money",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 9,
+    "growth": 5,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "65%",
+    "label": "are fed up with tipping, up from 53% in 2023"
+   },
+   "whyNow": "Holiday shopping and dining out mean even more tip prompts this month.",
+   "frustration": "The tablet gets flipped around for a coffee, a pickup order, even self-checkout, and the suggested amounts keep rising. People feel guilt-tripped in front of the cashier, unsure what's expected, and annoyed at being asked to tip for little or no service.",
+   "voices": [
+    "People say they get several tip prompts every weekend for things that involved no service.",
+    "Customers describe real anxiety when the screen turns toward them with a line behind them.",
+    "Many say they'd rather pay higher menu prices so workers earn more and tipping goes away."
+   ],
+   "stats": [
+    {
+     "value": "90%",
+     "label": "say tipping culture is out of control, up from 75%",
+     "src": 0
+    },
+    {
+     "value": "62%",
+     "label": "of pickup orders got a tip in 2026, down from 78% in 2022",
+     "src": 1
+    },
+    {
+     "value": "74%",
+     "label": "noticed restaurants raising suggested tip amounts",
+     "src": 2
+    },
+    {
+     "value": "56%",
+     "label": "would pay higher prices to end tipping",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "Where people are cutting back on tips in 2026 (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Restaurants",
+      "value": 35
+     },
+     {
+      "label": "Grocery delivery",
+      "value": 24
+     },
+     {
+      "label": "Hotel staff",
+      "value": 19
+     },
+     {
+      "label": "Taxis and rideshare",
+      "value": 19
+     }
+    ],
+    "src": 3
+   },
+   "who": "Nearly every shopper, plus tipped workers whose pay is dropping as people tip less.",
+   "causes": [
+    "Payment tablets make asking for a tip free and automatic.",
+    "Default buttons start high, so the 'normal' amount keeps going up.",
+    "Tipped workers often get low base pay, so businesses lean on tips.",
+    "Inflation leaves customers with less to spare."
+   ],
+   "existing": [
+    {
+     "name": "Service-included restaurants",
+     "gap": "Rare, and prices look higher on the menu."
+    },
+    {
+     "name": "Tipping etiquette guides",
+     "gap": "Nobody agrees, and they don't cover new situations."
+    }
+   ],
+   "sparks": [
+    "What if a quick tool told you the normal tip for any situation in two seconds?",
+    "Could businesses show exactly where a tip goes, building trust?",
+    "How could tipped workers keep their income as tipping declines?"
+   ],
+   "sources": [
+    {
+     "title": "Tipping fatigue rises as Americans push back (WalletHub via CNY Central)",
+     "url": "https://cnycentral.com/news/nation-world/tipping-fatigue-rises-as-americans-push-back-against-growing-culture"
+    },
+    {
+     "title": "Here's why most people think tipping has gotten out of hand (Money Talks News)",
+     "url": "https://www.moneytalksnews.com/heres-why-most-people-think-tipping-has-gotten-out-of-hand/"
+    },
+    {
+     "title": "Americans say tipping practices have become ridiculous (Fox News)",
+     "url": "https://www.foxnews.com/food-drink/americans-say-tipping-practices-become-ridiculous-digital-screens-push-higher-gratuities.print"
+    },
+    {
+     "title": "America's tipping culture reaches a breaking point (KTLA)",
+     "url": "https://ktla.com/news/nationworld/america-snaps-tipping-culture-finally-reaches-a-breaking-point/amp/"
+    },
+    {
+     "title": "Popmenu survey: 65% of Americans are tired of tipping (FSR)",
+     "url": "https://www.fsrmagazine.com/industry-news/popmenu-survey-65-percent-of-americans-say-theyre-tired-of-tipping/"
+    }
+   ]
+  },
+  {
+   "id": "chatbot-wall",
+   "title": "Customer-service chatbots won't let you reach a real person",
+   "dek": "Most people have had a frustrating chatbot conversation, and many now try to trick the bot into handing them to a human.",
+   "category": "Tech",
+   "region": "Global",
+   "trend": "worse",
+   "scores": {
+    "reach": 9,
+    "growth": 7,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "53–77%",
+    "label": "have had a bad or frustrating chatbot experience"
+   },
+   "whyNow": "Holiday orders and returns are about to flood support lines, and more companies are switching to AI agents this year.",
+   "frustration": "The bot answers instantly but doesn't solve the problem. It repeats the same help articles, misunderstands anything unusual, and hides the 'talk to a human' option. When you finally reach a person, you have to explain everything again from the start.",
+   "voices": [
+    "People describe typing 'agent' or 'human' over and over until something changes.",
+    "Customers say the bot is fast but never actually fixes anything.",
+    "Many admit they've shouted or sworn at an automated support agent."
+   ],
+   "stats": [
+    {
+     "value": "64%",
+     "label": "would prefer companies didn't use AI for service",
+     "src": 0
+    },
+    {
+     "value": "53%",
+     "label": "would consider switching to a competitor over it",
+     "src": 0
+    },
+    {
+     "value": "57%",
+     "label": "say heavy AI use lowers their trust, up from 53%",
+     "src": 1
+    },
+    {
+     "value": "46%",
+     "label": "rated their last chatbot experience positively, the lowest of any channel",
+     "src": 2
+    }
+   ],
+   "chart": {
+    "title": "How customers feel about AI customer service (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Prefer companies don't use it",
+      "value": 64
+     },
+     {
+      "label": "Trust would drop",
+      "value": 57
+     },
+     {
+      "label": "Might switch companies",
+      "value": 53
+     },
+     {
+      "label": "Rated last chat positively",
+      "value": 46
+     }
+    ],
+    "src": 0
+   },
+   "who": "Anyone who contacts a big company for help, especially about refunds, billing errors or account lockouts.",
+   "causes": [
+    "Each chatbot conversation saves a company about $0.70 compared with a human agent.",
+    "Bots are often tuned to 'deflect' contacts rather than resolve them.",
+    "Hand-offs to humans lose the conversation history."
+   ],
+   "existing": [
+    {
+     "name": "Shortcut sites listing how to reach a human",
+     "gap": "Go out of date fast, and only cover big companies."
+    },
+    {
+     "name": "'Press 0' and keyword tricks",
+     "gap": "Companies keep closing these loopholes."
+    }
+   ],
+   "sparks": [
+    "What if a tool wrote up your problem once and carried it across bot, chat and phone?",
+    "Could an app rate companies on how fast you actually reach a person?",
+    "What would a chatbot designed to hand off early look like?"
+   ],
+   "sources": [
+    {
+     "title": "Chatbot frustration is real: hidden costs and best practices (Berkeley CMR)",
+     "url": "https://cmr.berkeley.edu/2026/04/chatbot-frustration-is-real-hidden-costs-and-best-practices/"
+    },
+    {
+     "title": "Report: backlash grows against AI in customer service (Business Journal Daily)",
+     "url": "https://businessjournaldaily.com/report-backlash-grows-against-ai-in-customer-service/"
+    },
+    {
+     "title": "Contact center leaders, you have 10 minutes (CMSWire / Five9)",
+     "url": "https://www.cmswire.com/contact-center/contact-center-leaders-you-have-10-minutes/"
+    },
+    {
+     "title": "Customers fed up with AI service agents (Futurism)",
+     "url": "https://futurism.com/artificial-intelligence/customers-fed-up-ai-service-agents"
+    }
+   ]
+  },
+  {
+   "id": "ai-detector",
+   "title": "Students who wrote their own essays get flagged as AI cheaters",
+   "dek": "AI detectors misfire on real student writing, and accused students struggle to prove their innocence.",
+   "category": "School",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 6,
+    "growth": 7,
+    "solvable": 7
+   },
+   "keyStat": {
+    "value": "75%",
+    "label": "of students who use AI are stressed about being wrongly flagged"
+   },
+   "whyNow": "End-of-semester essays and finals are coming up, and more schools are relying on detectors.",
+   "frustration": "A detector score, which is only a guess, gets treated as proof. Students who write plainly or follow a formula get flagged, and then they have to defend themselves with no clear process. Some 'dumb down' their writing or run it through AI 'humanizers' just to avoid suspicion.",
+   "voices": [
+    "Students say they were accused even though they wrote every word themselves.",
+    "One high schooler reported being flagged on three assignments in two classes in a single year.",
+    "Students say they now record themselves writing or keep every draft, just in case."
+   ],
+   "stats": [
+    {
+     "value": "~2/3",
+     "label": "of teachers regularly use AI-detection tools",
+     "src": 2
+    },
+    {
+     "value": "4%",
+     "label": "sentence-level false-positive rate Turnitin once acknowledged",
+     "src": 3
+    },
+    {
+     "value": "80%",
+     "label": "of college students now use AI, per unpublished 2026 data",
+     "src": 4
+    },
+    {
+     "value": "Several",
+     "label": "lawsuits filed by students over false flags",
+     "src": 1
+    }
+   ],
+   "chart": null,
+   "who": "High school and college students, especially non-native English speakers and anyone with a simple, formulaic writing style.",
+   "causes": [
+    "Detectors guess from writing patterns and can't actually prove where text came from.",
+    "Rules about AI differ from class to class, so nobody knows what counts as cheating.",
+    "Schools often have no fair appeal process for a detector score."
+   ],
+   "existing": [
+    {
+     "name": "Draft history (Google Docs, writing-replay tools)",
+     "gap": "Only helps if you set it up before you're accused."
+    },
+    {
+     "name": "Schools turning detectors off (for example, Vanderbilt)",
+     "gap": "Most schools still use them."
+    },
+    {
+     "name": "In-class writing",
+     "gap": "Doesn't work for long projects."
+    }
+   ],
+   "sparks": [
+    "What if students had an easy, private 'proof of process' log that teachers trust?",
+    "Could a one-page guide help a student respond to a false accusation?",
+    "How might a class set clear, simple AI rules that everyone agrees on?"
+   ],
+   "sources": [
+    {
+     "title": "Falsely accused of AI cheating? (GPTZero, citing Studiosity/YouGov 2026)",
+     "url": "https://gptzero.me/news/falsely-accused-of-ai-cheating/"
+    },
+    {
+     "title": "To avoid accusations of AI cheating, college students are turning to AI (NBC News)",
+     "url": "https://nbcnews.com/tech/internet/college-students-ai-cheating-detectors-humanizers-rcna253878"
+    },
+    {
+     "title": "AI detectors falsely accuse students of cheating (Bloomberg)",
+     "url": "https://prod.cm.bloomberg.com/news/features/2024-10-18/do-ai-detectors-work-students-face-false-cheating-accusations"
+    },
+    {
+     "title": "AI detection tools might not be the answer just yet (ABA Journal)",
+     "url": "https://www.americanbar.org/groups/journal/articles/2025/ai-detection-tools-might-not-be-the-answer-just-yet/"
+    },
+    {
+     "title": "Inside the college AI cheating wars (Anchorage Daily News / LA Times)",
+     "url": "https://www.adn.com/nation-world/2026/06/21/inside-college-ai-cheating-wars-extreme-surveillance-false-accusations-jarring-confusion/"
+    }
+   ]
+  },
+  {
+   "id": "phone-ban-emergency",
+   "title": "All-day phone bans leave students unsure how they'd reach family in an emergency",
+   "dek": "Most students accept classroom phone limits, but 80% oppose bans that last the whole school day.",
+   "category": "School",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 6,
+    "growth": 6,
+    "solvable": 7
+   },
+   "keyStat": {
+    "value": "38 states",
+    "label": "plus DC now require schools to ban or restrict phones"
+   },
+   "whyNow": "A new report this month found students split sharply between classroom limits and all-day bans.",
+   "frustration": "Students don't mind putting phones away during class. What worries them is having no way to contact family during a crisis, a sudden schedule change or after-school pickup problems, and no say in how the rules work.",
+   "voices": [
+    "Students say their main worry is not being able to reach family if something serious happens.",
+    "Teens say they still need their phone to sort out rides and plans after school.",
+    "Some say phone use just moves to hallways and bathrooms instead of stopping."
+   ],
+   "stats": [
+    {
+     "value": "64%",
+     "label": "of high schoolers support classroom phone bans",
+     "src": 0
+    },
+    {
+     "value": "80%",
+     "label": "oppose all-day bans",
+     "src": 0
+    },
+    {
+     "value": "42%",
+     "label": "attend a school with an all-day ban",
+     "src": 0
+    },
+    {
+     "value": "93%",
+     "label": "of parents back bell-to-bell bans or no phones in class",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "Who supports which phone rule (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Students: classroom-only ban",
+      "value": 64
+     },
+     {
+      "label": "Students: don't oppose all-day ban",
+      "value": 20
+     },
+     {
+      "label": "Parents: bell-to-bell or in-class ban",
+      "value": 93
+     }
+    ],
+    "src": 0
+   },
+   "who": "Middle and high school students, and parents who handle pickups and emergencies.",
+   "causes": [
+    "States passed bans quickly, often without asking students.",
+    "Schools rarely explain how emergency contact will work instead.",
+    "Pouches and lockers make even quick, necessary messages impossible."
+   ],
+   "existing": [
+    {
+     "name": "Front-office phones",
+     "gap": "Slow, public, and not available during a lockdown."
+    },
+    {
+     "name": "Lockable phone pouches",
+     "gap": "Block emergencies along with distractions."
+    }
+   ],
+   "sparks": [
+    "What would a school 'emergency-only' messaging system that parents trust look like?",
+    "Could students help design phone rules that cut distraction without cutting safety?",
+    "How could after-school pickup changes reach students without phones?"
+   ],
+   "sources": [
+    {
+     "title": "Students support classroom cellphone limits but oppose all-day bans (Finger Lakes 1)",
+     "url": "https://www.fingerlakes1.com/2026/11/05/students-support-classroom-cellphone-limits-but-still-oppose-all-day-bans-report-finds/"
+    },
+    {
+     "title": "Survey: parents and teens support school cellphone bans (Brookings)",
+     "url": "https://www.brookings.edu/articles/survey-parents-and-teens-support-school-cellphone-bans/"
+    },
+    {
+     "title": "77% of US adults now back in-school cellphone bans (GCN / Pew)",
+     "url": "https://gcn.com/adults-now-back-school-cellphone-bans/22093/"
+    },
+    {
+     "title": "A year later: what teens tell us about school cellphone bans (Brookings)",
+     "url": "https://www.brookings.edu/articles/a-year-later-what-teens-tell-us-about-school-cellphone-bans/"
+    }
+   ]
+  },
+  {
+   "id": "late-school-bus",
+   "title": "The school bus shows up late, or doesn't show up at all",
+   "dek": "There are about 21,000 fewer school bus drivers than in 2019, and families are scrambling to fill the gaps.",
+   "category": "School",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 6,
+    "growth": 4,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "7,000+",
+    "label": "bus delay alerts in one district in 10 weeks"
+   },
+   "whyNow": "Districts in Indiana and South Carolina reported new disruptions this month.",
+   "frustration": "Parents get a last-minute text that the bus isn't coming and have to find another ride right away. Kids arrive late, ride far longer on combined routes, or lose bus service for after-school activities altogether.",
+   "voices": [
+    "Parents describe scrambling for a ride after a last-minute 'no bus today' text.",
+    "Students say combined routes make their ride much longer.",
+    "Families say they had to pay for rideshares just to get their kid to school."
+   ],
+   "stats": [
+    {
+     "value": "~21,000",
+     "label": "fewer school bus drivers than in 2019",
+     "src": 0
+    },
+    {
+     "value": "~10%",
+     "label": "drop in bus driver jobs from 2019 to 2025",
+     "src": 1
+    },
+    {
+     "value": "26M",
+     "label": "students ride school buses daily",
+     "src": 2
+    },
+    {
+     "value": "3 days",
+     "label": "of remote learning in Fort Wayne in April due to no drivers",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "What districts report from the driver shortage (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Longer ride times",
+      "value": 46
+     },
+     {
+      "label": "Missed or late pickups",
+      "value": 39
+     },
+     {
+      "label": "Canceled or combined routes",
+      "value": 30
+     },
+     {
+      "label": "Staff burnout",
+      "value": 26
+     }
+    ],
+    "src": 3
+   },
+   "who": "Families who rely on the bus, hardest on students with disabilities and parents who can't leave work.",
+   "causes": [
+    "Split shifts and part-time hours make the job hard to fill.",
+    "Commercial license requirements slow down hiring.",
+    "Aging drivers are retiring faster than new ones join."
+   ],
+   "existing": [
+    {
+     "name": "Bus-tracking apps",
+     "gap": "They show the delay but don't fix it."
+    },
+    {
+     "name": "Paid CDL training and higher pay",
+     "gap": "Slow to show results."
+    },
+    {
+     "name": "Contracted small-vehicle services",
+     "gap": "Expensive for districts."
+    }
+   ],
+   "sparks": [
+    "What if families on the same route could quickly coordinate a carpool when the bus is canceled?",
+    "Could a district share real-time 'bus or no bus' status earlier and more reliably?",
+    "How could routing tools make shorter routes with fewer drivers?"
+   ],
+   "sources": [
+    {
+     "title": "Districts nationwide continue to face school bus driver shortages (Stacker)",
+     "url": "https://stacker.com/stories/k-12/districts-nationwide-continue-face-school-bus-driver-shortages"
+    },
+    {
+     "title": "How districts are addressing bus driver shortages (InvestigateTV)",
+     "url": "https://www.kctv5.com/2026/11/03/how-districts-are-addressing-bus-driver-shortages/"
+    },
+    {
+     "title": "Schools hope they can replenish their bus driver ranks (EdWeek)",
+     "url": "https://www.edweek.org/leadership/schools-hope-they-can-replenish-their-bus-driver-ranks-this-summer/2026/05"
+    },
+    {
+     "title": "Bus driver shortages are a reality, not a phase (HopSkipDrive)",
+     "url": "https://www.hopskipdrive.com/blog/school-bus-driver-shortage-2026/"
+    }
+   ]
+  },
+  {
+   "id": "rideshare-wait",
+   "title": "Rideshare cars take longer to arrive, and rides cost more",
+   "dek": "One analysis found Uber riders waiting 19% longer for a car while paying 53% more than three years ago.",
+   "category": "Transport",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 7,
+    "growth": 5,
+    "solvable": 4
+   },
+   "keyStat": {
+    "value": "+19%",
+    "label": "longer wait from match to pickup, 2023→2026"
+   },
+   "whyNow": "Holiday travel week means airport rides and surge pricing.",
+   "frustration": "The app shows a car three minutes away, then the time keeps climbing, or the driver cancels and the search starts over at a higher price. Riders who need to be on time can't trust the estimate.",
+   "voices": [
+    "Riders say the car showed as one minute away and then the ride got canceled.",
+    "Some say they've switched to buses because peak-hour prices feel like a rip-off.",
+    "People say the promised wait time is regularly shorter than the real one."
+   ],
+   "stats": [
+    {
+     "value": "+53%",
+     "label": "higher fares, Q1 2023 to Q1 2026",
+     "src": 0
+    },
+    {
+     "value": "37,500",
+     "label": "trips analyzed across six US cities",
+     "src": 0
+    },
+    {
+     "value": "+9.6%",
+     "label": "average fare increase in 2025",
+     "src": 1
+    },
+    {
+     "value": "60.4%",
+     "label": "of riders say they've cut back because of prices",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "Uber riders, Q1 2023 → Q1 2026 (% change)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Fare paid",
+      "value": 53
+     },
+     {
+      "label": "Wait for pickup",
+      "value": 19
+     }
+    ],
+    "src": 0
+   },
+   "who": "City riders without a car, airport travelers, and people out late when transit stops running.",
+   "causes": [
+    "Customer prices rose faster than driver pay, so fewer drivers want to work.",
+    "Drivers split their time between rides and food delivery.",
+    "Surge pricing kicks in exactly when people need rides most."
+   ],
+   "existing": [
+    {
+     "name": "Comparing Uber vs Lyft by hand",
+     "gap": "Slow, and prices change while you switch apps."
+    },
+    {
+     "name": "Scheduled rides",
+     "gap": "Still get canceled at the last minute."
+    },
+    {
+     "name": "Robotaxis",
+     "gap": "Only in a few cities so far."
+    }
+   ],
+   "sparks": [
+    "What if one screen compared real wait and price across every ride option, including transit?",
+    "Could neighbors heading the same way share rides more easily?",
+    "How could the apps show the real wait, not the hopeful one?"
+   ],
+   "sources": [
+    {
+     "title": "Uber riders are paying 53% more while waiting 19% longer (Benzinga)",
+     "url": "https://www.benzinga.com/node/62152420"
+    },
+    {
+     "title": "Uber and Lyft got pricier last year — here's how riders responded (Entrepreneur)",
+     "url": "https://www.entrepreneur.com/business-news/uber-lyft-rides-got-more-expensive-2025"
+    },
+    {
+     "title": "Lyft reviews (Trustpilot)",
+     "url": "https://www.trustpilot.com/review/www.lyft.com?page=3"
+    }
+   ]
+  },
+  {
+   "id": "scam-texts",
+   "title": "Fake toll, package and bank texts hit phones every day",
+   "dek": "Scam texts and calls are now the top way scammers reach victims, and texts have weaker protections than calls.",
+   "category": "Tech & safety",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 9,
+    "growth": 6,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "1 in 5",
+    "label": "Americans get a scam text every day"
+   },
+   "whyNow": "Holiday deliveries are prime time for fake 'your package is delayed' texts.",
+   "frustration": "The texts look official (a toll you supposedly owe, a package that couldn't be delivered, a bank alert) and arrive when you're busy. Blocking one number does nothing because the next one comes from a new number, and people worry about older relatives falling for them.",
+   "voices": [
+    "People say they block a number and get the same scam from a new one the next day.",
+    "Many worry more about their parents or grandparents than themselves.",
+    "Users say the fake delivery texts are hardest to tell apart during the holidays."
+   ],
+   "stats": [
+    {
+     "value": "~440,000",
+     "label": "scam reports analyzed by the BBB",
+     "src": 0
+    },
+    {
+     "value": "1 in 3",
+     "label": "Americans get at least one scam call a day",
+     "src": 1
+    },
+    {
+     "value": "19.2B",
+     "label": "spam texts in a single month (Feb 2025)",
+     "src": 2
+    }
+   ],
+   "chart": {
+    "title": "What reported texts turned out to be (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Scams",
+      "value": 40.3
+     },
+     {
+      "label": "Spam",
+      "value": 35.1
+     },
+     {
+      "label": "Other",
+      "value": 24.6
+     }
+    ],
+    "src": 3
+   },
+   "who": "Everyone with a phone, hardest on older adults and people expecting deliveries or toll bills.",
+   "causes": [
+    "A 2021 crackdown on robocalls pushed scammers to texts.",
+    "Telecom rules were written for landlines and cover texts less well.",
+    "Bulk texting is cheap, and fake sender names are easy to set up."
+   ],
+   "existing": [
+    {
+     "name": "Phone spam filters",
+     "gap": "Many people never turn them on, and they miss new scams."
+    },
+    {
+     "name": "Forwarding to 7726 (SPAM)",
+     "gap": "Few people know it exists, and there's no feedback."
+    }
+   ],
+   "sparks": [
+    "What if you could forward a suspicious text and get a plain yes-or-no answer in seconds?",
+    "Could a 'family guardian' tool warn relatives about the latest scam going around?",
+    "How could real companies prove their texts are genuine?"
+   ],
+   "sources": [
+    {
+     "title": "Scammers are using everyday tech tools to flood your phone (InvestigateTV / BBB)",
+     "url": "https://www.kbtx.com/2026/10/02/scammers-are-using-everyday-tech-tools-flood-your-phone/"
+    },
+    {
+     "title": "Americans are getting 2.5 billion robocalls a month (CBS News)",
+     "url": "https://www.cbsnews.com/amp/miami/news/robocalls-on-the-rise-heres-why"
+    },
+    {
+     "title": "Spam text statistics for 2026 (SlickText)",
+     "url": "https://www.slicktext.com/blog/2022/10/17-spam-text-statisitics-for-2022/"
+    },
+    {
+     "title": "An overview of 7726 user reports (arXiv)",
+     "url": "https://ar5iv.labs.arxiv.org/html/2508.05276"
+    }
+   ]
+  },
+  {
+   "id": "job-ghosting",
+   "title": "You send hundreds of job applications and never hear from a human",
+   "dek": "AI tools on both sides have turned hiring into a numbers game, and being ghosted is now the norm rather than the exception.",
+   "category": "Work",
+   "region": "Global",
+   "trend": "worse",
+   "scores": {
+    "reach": 7,
+    "growth": 7,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "67%",
+    "label": "of job seekers have run into fake 'ghost' job listings"
+   },
+   "whyNow": "Ghosting by employers hit a three-year high this year as AI screening spreads.",
+   "frustration": "Applicants spend hours tailoring applications, then get silence. They can't tell whether a person ever read their résumé, whether the job was even real, or why they were filtered out. Even after an AI interview, many never hear back.",
+   "voices": [
+    "One applicant got a rejection 11 months after applying.",
+    "Job seekers say they now assume an algorithm, not a person, rejected them.",
+    "People say the silence affects their mental health more than rejections would."
+   ],
+   "stats": [
+    {
+     "value": "~51%",
+     "label": "of people who did an AI interview were ghosted or are still waiting",
+     "src": 1
+    },
+    {
+     "value": "41%",
+     "label": "believe fewer than a quarter of their applications reach a human",
+     "src": 2
+    },
+    {
+     "value": "49%",
+     "label": "say job hunting is hurting their mental health",
+     "src": 0
+    },
+    {
+     "value": "76%",
+     "label": "of recruiters spend more of their time on screening",
+     "src": 3
+    }
+   ],
+   "chart": {
+    "title": "Job seekers using AI in their search, by country (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "India",
+      "value": 84
+     },
+     {
+      "label": "Global average",
+      "value": 52
+     },
+     {
+      "label": "United States",
+      "value": 22
+     }
+    ],
+    "src": 4
+   },
+   "who": "Job seekers everywhere, especially students looking for first jobs and internships.",
+   "causes": [
+    "AI 'auto-apply' tools flood recruiters with polished applications.",
+    "Résumé filters reject people before a human ever sees them.",
+    "Companies have no reason to send rejections, and some post jobs they don't plan to fill."
+   ],
+   "existing": [
+    {
+     "name": "Application-tracking spreadsheets",
+     "gap": "Track the silence, but don't end it."
+    },
+    {
+     "name": "Company review sites",
+     "gap": "Rarely say how fast a company responds."
+    }
+   ],
+   "sparks": [
+    "What if job boards showed each company's real response rate and time?",
+    "Could a tool flag listings that look like ghost jobs before you apply?",
+    "How could students prove real skills in a way that beats résumé filters?"
+   ],
+   "sources": [
+    {
+     "title": "Ghost jobs still haunting 67% of job seekers (CPA Practice Advisor / Resume Genius)",
+     "url": "https://www.cpapracticeadvisor.com/2026/04/30/ghost-jobs-still-haunting-67-of-job-seekers-report-finds/182536/"
+    },
+    {
+     "title": "4 in 10 job candidates bailed on hiring rounds that required an AI interview (Fortune)",
+     "url": "https://fortune.com/2026/05/04/4-in-10-job-candidates-bailed-hiring-rounds-required-ai-interview/"
+    },
+    {
+     "title": "AI barriers and complex applications lead to job-search burnout (HR Dive)",
+     "url": "https://www.hrdive.com/news/ai-barriers-complex-application-processes-lead-to-job-search-burnout/807661/"
+    },
+    {
+     "title": "Candidates ghosting employers (LHH)",
+     "url": "https://www.lhh.com/en-us/insights/candidates-ghosting-employers"
+    },
+    {
+     "title": "Inside Candidate Experience 2026 (PeopleScout)",
+     "url": "https://www.peoplescout.com/wp-content/uploads/2026/07/PeopleScout-Inside-Candidate-Experience-2026-Infographic.pdf"
+    },
+    {
+     "title": "Job seekers aren't imagining things (Fortune)",
+     "url": "https://fortune.com/2026/03/20/job-seekers-arent-imagining-things-candidates-ghosted-by-employers-hit-three-year-high/"
+    }
+   ]
+  },
+  {
+   "id": "streaming-creep",
+   "title": "Streaming keeps getting pricier, and sharing a password now costs extra",
+   "dek": "Netflix's top plan is up 50% since 2021, and more services are charging for viewers outside the household.",
+   "category": "Tech & money",
+   "region": "US",
+   "trend": "worse",
+   "scores": {
+    "reach": 8,
+    "growth": 5,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "+50%",
+    "label": "Netflix Premium price, 2021 to 2026"
+   },
+   "whyNow": "Peacock raised every plan in August and HBO Max is expanding its sharing crackdown in 2026.",
+   "frustration": "Prices go up a dollar or two at a time, ads creep into cheaper plans, and families who used to share an account now pay per extra person, all while favorite shows get canceled. It's hard to keep track of what you pay across services and when it's worth canceling.",
+   "voices": [
+    "People remember when ad-free Netflix with sharing cost $9.99.",
+    "Subscribers ask whether streaming is actually getting better, or just more expensive.",
+    "Some say they now cancel and rejoin services one at a time to save money."
+   ],
+   "stats": [
+    {
+     "value": "$26.99",
+     "label": "Netflix Premium per month (was $17.99 in 2021)",
+     "src": 0
+    },
+    {
+     "value": "$7.99–9.99",
+     "label": "for each extra Netflix member outside the home",
+     "src": 0
+    },
+    {
+     "value": "Mar 2026",
+     "label": "Netflix's second increase in under two years",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "Netflix US monthly plans after the March 2026 increase ($)",
+    "unit": "$",
+    "rows": [
+     {
+      "label": "Standard with ads",
+      "value": 8.99
+     },
+     {
+      "label": "Standard",
+      "value": 19.99
+     },
+     {
+      "label": "Premium",
+      "value": 26.99
+     }
+    ],
+    "src": 1
+   },
+   "who": "Most households, especially students and families who split accounts across homes.",
+   "causes": [
+    "Services spend billions on content and need more revenue per user.",
+    "Sharing crackdowns turn shared accounts into paying ones.",
+    "Small, frequent increases rarely make people cancel."
+   ],
+   "existing": [
+    {
+     "name": "Rotating subscriptions month to month",
+     "gap": "Takes planning, and it's easy to forget."
+    },
+    {
+     "name": "Bundles",
+     "gap": "Often include services you don't watch."
+    },
+    {
+     "name": "Subscription tracker apps",
+     "gap": "Show costs but don't help decide what to drop."
+    }
+   ],
+   "sparks": [
+    "What if a tool told you which service to cancel this month based on what you actually watch?",
+    "Could friends legally pool and rotate subscriptions on a schedule?",
+    "How could you see 'cost per hour watched' for each service?"
+   ],
+   "sources": [
+    {
+     "title": "Netflix crosses the line: 50% price surge (Inside the Magic)",
+     "url": "https://insidethemagic.net/2026/09/netflix-crosses-the-line-50-price-surge-and-strict-policies-spark-subscriber-exodus-sb1/"
+    },
+    {
+     "title": "Netflix ups subscription prices again (Ground News)",
+     "url": "https://ground.news/article/netflix-increases-subscription-fees-again-with-prices-up-125-across-plans"
+    },
+    {
+     "title": "Netflix's price increase sparks backlash (AOL)",
+     "url": "https://www.aol.com/lifestyle/netflix-price-increase-sparks-backlash-200847944.html"
+    },
+    {
+     "title": "HBO Max is cracking down on password sharing (Digital Trends)",
+     "url": "https://www.digitaltrends.com/home-theater/hbo-max-is-cracking-down-on-password-sharing-and-price-hikes-might-be-part-of-the-plan/"
+    }
+   ]
+  },
+  {
+   "id": "parking-apps",
+   "title": "Every parking lot wants you to download a different app",
+   "dek": "Three in four UK drivers who pay by app have hit problems, and most juggle several parking apps.",
+   "category": "Transport",
+   "region": "UK",
+   "trend": "steady",
+   "scores": {
+    "reach": 6,
+    "growth": 4,
+    "solvable": 8
+   },
+   "keyStat": {
+    "value": "73%",
+    "label": "of parking-app users ran into problems in the past year"
+   },
+   "whyNow": "More councils are removing payment machines, and US cities like LA are adding text-to-pay and app options.",
+   "frustration": "You pull in, find the machine removed, download yet another app, create an account, and lose signal halfway through. Enter one wrong digit for your location and you get fined anyway. QR codes on meters can even be fake ('quishing').",
+   "voices": [
+    "Drivers say they have five parking apps on their phone just to park around town.",
+    "People report fines even after paying, because the app chose the wrong lot.",
+    "Some say they spent ten minutes trying to pay one meter."
+   ],
+   "stats": [
+    {
+     "value": "70%",
+     "label": "of app users hit poor mobile signal",
+     "src": 0
+    },
+    {
+     "value": "36%",
+     "label": "said the app didn't recognize the car park",
+     "src": 0
+    },
+    {
+     "value": "~50%",
+     "label": "say they were wrongly fined while using an app",
+     "src": 1
+    },
+    {
+     "value": "6%",
+     "label": "prefer QR-code payment, due to scam risk",
+     "src": 0
+    }
+   ],
+   "chart": {
+    "title": "Parking apps installed on drivers' phones (% of app users)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "2 or more",
+      "value": 64
+     },
+     {
+      "label": "3 or more",
+      "value": 36
+     },
+     {
+      "label": "4 or more",
+      "value": 15
+     }
+    ],
+    "src": 0
+   },
+   "who": "Drivers in towns and cities, especially visitors and older people without smartphones.",
+   "causes": [
+    "Each operator or council picks its own app.",
+    "Removing machines saves councils money.",
+    "Underground or rural car parks often have weak signal."
+   ],
+   "existing": [
+    {
+     "name": "UK National Parking Platform trials",
+     "gap": "Only about 10 councils have tried it so far."
+    },
+    {
+     "name": "App-free text or QR payments",
+     "gap": "QR codes can be faked by scammers."
+    }
+   ],
+   "sparks": [
+    "What if one app worked in every lot, the way a bank card does?",
+    "Could pay-by-plate let drivers pay once without signal or downloads?",
+    "How could drivers check whether a QR code on a meter is genuine?"
+   ],
+   "sources": [
+    {
+     "title": "Almost three in four parking app users face problems (Express & Star / RAC)",
+     "url": "https://www.expressandstar.com/uk-news/almost-three-in-four-parking-app-users-face-problems-survey-5663138"
+    },
+    {
+     "title": "Drivers fed up with being wrongly fined by parking apps (Honest John)",
+     "url": "https://www.honestjohn.co.uk/news/driving/2026-01/drivers-fed-up-with-being-wrongly-fined-by-parking-apps"
+    },
+    {
+     "title": "Five apps, one car — parking doesn't have to be this hard (LBC)",
+     "url": "https://www.lbc.co.uk/opinion/views/five-apps-one-car-parking-doesnt-have-to-be-this-hard"
+    },
+    {
+     "title": "Coins, cards, apps: the hell of paying for parking (AOL / LA Times)",
+     "url": "https://www.aol.com/news/coins-cards-apps-hell-paying-100000022.html"
+    }
+   ]
+  }
+ ],
+ "personal": [
+  {
+   "id": "ai-wrong-answers",
+   "title": "AI chatbots give confident answers that turn out to be wrong",
+   "dek": "Most people who use AI chatbots have been misled at some point, but checking every answer takes time they don't have.",
+   "category": "Tech",
+   "region": "Global",
+   "trend": "steady",
+   "scores": {
+    "reach": 9,
+    "growth": 6,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "42%",
+    "label": "of chatbot users can't tell whether an answer is accurate"
+   },
+   "whyNow": "More students and workers now lean on AI for homework, research and health questions every day.",
+   "frustration": "The answer sounds polished and sure of itself, so it's hard to spot when it's made up. When you point out a mistake, the bot often just agrees with you and apologizes, which doesn't tell you what's actually true. All the work of double-checking ends up on you.",
+   "voices": [
+    "Users say the worst part is how confident the wrong answers sound.",
+    "People complain that correcting a chatbot just gets an apology and a new guess.",
+    "Some say a made-up fact cost them hours of work before they caught it."
+   ],
+   "stats": [
+    {
+     "value": "89.5%",
+     "label": "feel the job of checking AI answers falls on them",
+     "src": 0
+    },
+    {
+     "value": "35.5%",
+     "label": "rarely or never check answers that sound confident",
+     "src": 0
+    },
+    {
+     "value": "27%",
+     "label": "named AI errors as their top AI worry, ahead of job loss (22%)",
+     "src": 1
+    },
+    {
+     "value": "3 in 4",
+     "label": "Czech users say AI has given them wrong or misleading answers",
+     "src": 2
+    }
+   ],
+   "chart": {
+    "title": "Chatbot users' experience (US & UK, %)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Felt uncertain at some point",
+      "value": 80.9
+     },
+     {
+      "label": "Can't tell if an answer is accurate",
+      "value": 42.4
+     },
+     {
+      "label": "Rarely check confident answers",
+      "value": 35.5
+     }
+    ],
+    "src": 0
+   },
+   "who": "Students, workers and anyone using AI for facts, from homework to health questions.",
+   "causes": [
+    "Chatbots predict likely-sounding text, which isn't the same as checking facts.",
+    "They write wrong answers in the same confident tone as right ones.",
+    "Friendly, agreeable replies make people trust them more."
+   ],
+   "existing": [
+    {
+     "name": "Answers with cited sources",
+     "gap": "Most people don't click the sources."
+    },
+    {
+     "name": "Asking a second AI",
+     "gap": "Slow, and both can be wrong."
+    }
+   ],
+   "sparks": [
+    "What if an answer showed which parts are well-supported and which are shaky?",
+    "Could a one-tap 'check this' button compare an answer against trusted sources?",
+    "How might students learn a quick habit for spotting AI mistakes?"
+   ],
+   "sources": [
+    {
+     "title": "AI chatbots: navigating distrust and usefulness (F-Secure, Apr 2026)",
+     "url": "https://www.f-secure.com/en/partners/illuminate-research/consumer-ai-survey-april-2026"
+    },
+    {
+     "title": "Claude users reveal AI hallucinations as their top concern (IEEE ComSoc)",
+     "url": "https://techblog.comsoc.org/2026/03/22/anthropic-clause-users-reveal-ai-hallucinations-as-their-top-concern/"
+    },
+    {
+     "title": "Three in four Czechs have received wrong answers from AI (Expats.cz)",
+     "url": "https://www.expats.cz/czech-news/article/three-in-four-czechs-have-received-wrong-answers-from-ai-survey-finds"
+    },
+    {
+     "title": "AI is still getting things wrong, more confidently than ever (Axios)",
+     "url": "https://axios.com/2026/05/30/ai-accuracy-chatbots-hallucinations"
+    }
+   ]
+  },
+  {
+   "id": "phone-distraction-studying",
+   "title": "You sit down to study and end up on your phone without meaning to",
+   "dek": "Most students say their phone hurts their concentration, and a lot of the checking happens without thinking.",
+   "category": "School",
+   "region": "UK",
+   "trend": "worse",
+   "scores": {
+    "reach": 8,
+    "growth": 5,
+    "solvable": 7
+   },
+   "keyStat": {
+    "value": "81%",
+    "label": "of students pick up their phone without thinking"
+   },
+   "whyNow": "End-of-term studying and finals season starts in the next few weeks.",
+   "frustration": "You open your notes, then a notification pops up, and 30 minutes later you're still scrolling. It isn't a choice so much as a reflex, and it leaves you behind and feeling worse about yourself.",
+   "voices": [
+    "Students say they look up from a video and realize their study tab has been sitting idle.",
+    "Many say they feel worse after spending longer on their phone than they meant to.",
+    "Some say they check their phone every 10–15 minutes while revising."
+   ],
+   "stats": [
+    {
+     "value": "69%",
+     "label": "say screen time hurts their concentration while studying",
+     "src": 1
+    },
+    {
+     "value": "51%",
+     "label": "blame push notifications for constant checking",
+     "src": 0
+    },
+    {
+     "value": "70%",
+     "label": "often feel worse after using their phone longer than intended",
+     "src": 0
+    },
+    {
+     "value": "510 hrs",
+     "label": "of unintentional phone use over a university year",
+     "src": 0
+    }
+   ],
+   "chart": {
+    "title": "How often UK students check their phone while revising (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Every 30 minutes",
+      "value": 39
+     },
+     {
+      "label": "Every 15 minutes or more",
+      "value": 29
+     },
+     {
+      "label": "Rarely",
+      "value": 27
+     },
+     {
+      "label": "Never",
+      "value": 5
+     }
+    ],
+    "src": 1
+   },
+   "who": "Students of every age, and anyone doing focused work with a phone nearby.",
+   "causes": [
+    "Notifications and infinite scroll are designed to pull you back in.",
+    "Pressure to reply quickly to friends.",
+    "Studying is hard, and the phone is an easy escape."
+   ],
+   "existing": [
+    {
+     "name": "Focus modes and app timers",
+     "gap": "Easy to switch off with one tap."
+    },
+    {
+     "name": "Lock boxes and phone bags",
+     "gap": "Block everything, including things you need."
+    }
+   ],
+   "sparks": [
+    "What if your phone only let through messages from people you choose during study blocks?",
+    "Could studying with friends turn putting phones away into a shared game?",
+    "How might an app reward focused time instead of blocking things?"
+   ],
+   "sources": [
+    {
+     "title": "Students on track to spend 510 hours on unintentional phone use (Virgin Media O2)",
+     "url": "https://news.virginmediao2.co.uk/?p=11763"
+    },
+    {
+     "title": "Screen time statistics 2026: 2,000+ UK students (Save My Exams)",
+     "url": "https://www.savemyexams.com/learning-hub/useful-resources/screen-time-statistics-uk/"
+    }
+   ]
+  },
+  {
+   "id": "bedtime-scrolling",
+   "title": "You keep scrolling in bed long after you meant to sleep",
+   "dek": "Half of adults use a screen in bed every day, and many say it's making their sleep worse.",
+   "category": "Habits",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 8,
+    "growth": 4,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "88%",
+    "label": "of 13–24-year-olds say they doomscroll"
+   },
+   "whyNow": "A new survey of young people last month found nightly doomscrolling is far more common than researchers expected.",
+   "frustration": "You get into bed planning to sleep, then 'one more video' turns into an hour. You know you'll be tired tomorrow, but it feels like the only free time you got all day.",
+   "voices": [
+    "People say they stay up just to get some time for themselves.",
+    "Many admit they know it'll wreck their sleep and do it anyway.",
+    "Young people say reading bad news at night makes it harder to fall asleep."
+   ],
+   "stats": [
+    {
+     "value": "38%",
+     "label": "say bedtime news scrolling makes their sleep worse",
+     "src": 0
+    },
+    {
+     "value": "50%",
+     "label": "use a screen in bed every day",
+     "src": 0
+    },
+    {
+     "value": "~332 hrs",
+     "label": "of sleep lost per year to staying up late",
+     "src": 1
+    },
+    {
+     "value": "26%",
+     "label": "choose phone time over enough sleep",
+     "src": 2
+    }
+   ],
+   "chart": {
+    "title": "Say bedtime doomscrolling hurts their sleep (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Adults aged 18–24",
+      "value": 46
+     },
+     {
+      "label": "All adults",
+      "value": 38
+     }
+    ],
+    "src": 3
+   },
+   "who": "Teens and young adults most of all, but half of all adults use screens in bed.",
+   "causes": [
+    "Endless feeds have no natural stopping point.",
+    "Busy days leave bedtime as the only 'me time'.",
+    "Phones sit right next to the bed."
+   ],
+   "existing": [
+    {
+     "name": "Bedtime and wind-down modes",
+     "gap": "Easy to override at night."
+    },
+    {
+     "name": "Night-light filters",
+     "gap": "Don't stop the scrolling itself."
+    }
+   ],
+   "sparks": [
+    "What if your phone gently wrapped up your feed with a 'you're all caught up' ending?",
+    "Could a bedtime routine app make stopping feel rewarding?",
+    "How could people get their 'me time' earlier in the day?"
+   ],
+   "sources": [
+    {
+     "title": "Doomscrolling affecting many Americans' sleep, poll finds (HealthDay / AASM)",
+     "url": "https://www.healthday.com/health-news/sleep-disorder/doomscrolling-affecting-many-americans-sleep-poll-finds"
+    },
+    {
+     "title": "'Revenge bedtime procrastination' could be costing you hours of sleep (Scripps)",
+     "url": "https://www.scrippsnews.com/health/revenge-bedtime-procrastination-could-be-costing-you-hours-of-sleep"
+    },
+    {
+     "title": "Americans are doomscrolling at bedtime (AASM)",
+     "url": "https://aasm.org/americans-are-doomscrolling-at-bedtime-prioritizing-screen-time-over-sleep/"
+    },
+    {
+     "title": "AASM sleep prioritization survey (PDF)",
+     "url": "https://aasm.org/wp-content/uploads/2026/02/sleep-prioritization-survey-2025-doomscrolling-impacting-sleep.pdf"
+    },
+    {
+     "title": "The doom of doomscrolling (Spectrum News / Hopelab)",
+     "url": "https://spectrumlocalnews.com/buffalo/news/2026/10/27/the-doom-of-doomscrolling"
+    }
+   ]
+  },
+  {
+   "id": "password-lockouts",
+   "title": "You get locked out of your own accounts because you forgot a password",
+   "dek": "Most Americans have been locked out at some point, and many simply give up on the account or purchase.",
+   "category": "Tech",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 9,
+    "growth": 3,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "51%",
+    "label": "have been locked out of an account over a login problem"
+   },
+   "whyNow": "Holiday shopping means logging into stores you only use once a year.",
+   "frustration": "You need one account right now, and the password is wrong, the reset email doesn't arrive, and the 2-step code goes to an old phone. People end up making new accounts, abandoning purchases, or reusing one weak password just to avoid this.",
+   "voices": [
+    "People say they avoid sites where they've forgotten the password rather than reset it.",
+    "Shoppers say they gave up on a purchase because checkout needed a password reset.",
+    "Many worry that losing their phone would lock them out of almost everything."
+   ],
+   "stats": [
+    {
+     "value": "42%",
+     "label": "stopped using an account or site over login problems",
+     "src": 0
+    },
+    {
+     "value": "62%",
+     "label": "have been locked out by 2-step verification",
+     "src": 1
+    },
+    {
+     "value": "70%",
+     "label": "feel exhausted by managing passwords",
+     "src": 2
+    },
+    {
+     "value": "16%",
+     "label": "use a unique password for every account",
+     "src": 3
+    }
+   ],
+   "chart": {
+    "title": "What login problems have caused (% of Americans)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Locked out by 2-step verification",
+      "value": 62
+     },
+     {
+      "label": "Locked out over a login problem",
+      "value": 51
+     },
+     {
+      "label": "Quit an account or site",
+      "value": 42
+     },
+     {
+      "label": "Abandoned a purchase to avoid a reset",
+      "value": 42
+     }
+    ],
+    "src": 1
+   },
+   "who": "Nearly everyone online, especially people with dozens of rarely used accounts.",
+   "causes": [
+    "People have too many accounts to remember unique passwords.",
+    "Recovery depends on an old email or phone number.",
+    "Security steps add new ways to get locked out."
+   ],
+   "existing": [
+    {
+     "name": "Password managers",
+     "gap": "Most people still don't use one."
+    },
+    {
+     "name": "Passkeys",
+     "gap": "Not supported everywhere yet, and confusing to set up."
+    }
+   ],
+   "sparks": [
+    "What if setting up a backup way into your accounts took two minutes, once?",
+    "Could a family share a simple, safe recovery plan for each other's accounts?",
+    "How might checkout work without needing an account at all?"
+   ],
+   "sources": [
+    {
+     "title": "More than half of Americans have abandoned a purchase over password problems (HostingAdvice)",
+     "url": "https://www.hostingadvice.com/studies/purchase-password-problems/"
+    },
+    {
+     "title": "The cost of login frustration (Frontegg)",
+     "url": "https://frontegg.com/guides/cost-of-login-frustration"
+    },
+    {
+     "title": "Americans hate password resets (Frontegg)",
+     "url": "https://frontegg.com/guides/user-authentication-preferences"
+    },
+    {
+     "title": "2 in 3 Americans still making password mistakes in 2026 (PasswordManager)",
+     "url": "https://passwordmanager.com/2-in-3-americans-are-still-making-these-obvious-and-dangerous-password-mistakes-in-2026"
+    }
+   ]
+  },
+  {
+   "id": "forgotten-free-trials",
+   "title": "A 'free trial' quietly turns into a monthly charge you forgot about",
+   "dek": "Around 7 in 10 people have been charged after forgetting to cancel a free trial.",
+   "category": "Money",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 8,
+    "growth": 4,
+    "solvable": 8
+   },
+   "keyStat": {
+    "value": "79%",
+    "label": "have forgotten to cancel a free trial and been charged"
+   },
+   "whyNow": "Holiday deals and Black Friday streaming trials start this week.",
+   "frustration": "You sign up meaning to cancel, the end date slips past, and the charge hides among everything else on your statement. Cancelling can take a maze of menus, so it gets put off again.",
+   "voices": [
+    "People say they only noticed months later, when they tried to sign up again.",
+    "Many say they set a reminder and then ignored it.",
+    "Some avoid trials completely because cancelling feels like a trap."
+   ],
+   "stats": [
+    {
+     "value": "$45/mo",
+     "label": "average cost of forgotten trials",
+     "src": 0
+    },
+    {
+     "value": "69%",
+     "label": "charged after forgetting to cancel a trial",
+     "src": 1
+    },
+    {
+     "value": "54%",
+     "label": "of UK adults skipped a subscription because cancelling looked hard",
+     "src": 2
+    },
+    {
+     "value": "Oct 1",
+     "label": "NYC's new click-to-cancel rule took effect",
+     "src": 0
+    }
+   ],
+   "chart": null,
+   "who": "Anyone who signs up for streaming, apps or software trials, which is most people.",
+   "causes": [
+    "Trials exist to get your card on file.",
+    "Companies don't remind you before the first charge.",
+    "Small charges blend into busy statements."
+   ],
+   "existing": [
+    {
+     "name": "Subscription trackers (for example, Rocket Money)",
+     "gap": "Only find a charge after you've paid it."
+    },
+    {
+     "name": "Calendar reminders",
+     "gap": "Easy to snooze or ignore."
+    },
+    {
+     "name": "Click-to-cancel rules",
+     "gap": "Only in some places so far."
+    }
+   ],
+   "sparks": [
+    "What if a one-tap 'cancel before I'm charged' timer started the moment you signed up?",
+    "Could a virtual card that expires with the trial do the remembering for you?",
+    "How might a phone notice a new trial from your email and set the reminder itself?"
+   ],
+   "sources": [
+    {
+     "title": "Americans are losing $45 a month to forgotten free trials (Cord Cutters News)",
+     "url": "https://cordcuttersnews.com/cord-cutters-check-your-credit-card-americans-are-losing-45-a-month-to-forgotten-free-trials/"
+    },
+    {
+     "title": "69% of people are losing money to hidden subscriptions (BestMoney)",
+     "url": "https://www.bestmoney.com/credit-cards/learn-more/hidden-subscription-fees-survey"
+    },
+    {
+     "title": "Subscription traps: how they work (ClearScore / Citizens Advice)",
+     "url": "https://www.clearscore.com/learn/managing-money/unwanted-subscription-spending-trap"
+    }
+   ]
+  },
+  {
+   "id": "group-chat-overload",
+   "title": "Group chats bury the one message you actually needed",
+   "dek": "Two-thirds of Americans have felt overwhelmed by group chats, and many say keeping up feels like a part-time job.",
+   "category": "Social",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 8,
+    "growth": 4,
+    "solvable": 7
+   },
+   "keyStat": {
+    "value": "66%",
+    "label": "have felt overwhelmed by group chats"
+   },
+   "whyNow": "Holiday plans mean family and friend chats explode with logistics this week.",
+   "frustration": "Fifty messages of memes and reactions pile up, and the one important thing (the time, the address, who's bringing what) gets lost. Muting means missing things, but leaving the notifications on means constant buzzing, and leaving the chat feels rude.",
+   "voices": [
+    "People say they scroll up through dozens of messages to find one detail.",
+    "Many feel they always have to reply, even when they don't want to.",
+    "Some say very early or very late messages drive them up the wall."
+   ],
+   "stats": [
+    {
+     "value": "52%",
+     "label": "say it's hard to keep up with group chats",
+     "src": 0
+    },
+    {
+     "value": "42%",
+     "label": "say group chats feel like a part-time job",
+     "src": 0
+    },
+    {
+     "value": "75%",
+     "label": "have muted an annoying group thread",
+     "src": 0
+    },
+    {
+     "value": "20%",
+     "label": "feel they always have to respond",
+     "src": 1
+    }
+   ],
+   "chart": {
+    "title": "How Americans feel about group chats (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "Muted a thread",
+      "value": 75
+     },
+     {
+      "label": "Felt overwhelmed",
+      "value": 66
+     },
+     {
+      "label": "Hard to keep up",
+      "value": 52
+     },
+     {
+      "label": "Annoyed by late or early messages",
+      "value": 49
+     }
+    ],
+    "src": 0
+   },
+   "who": "Anyone in family, friend, team or class chats, which is nearly everyone with a phone.",
+   "causes": [
+    "Chats mix casual talk with important plans in one stream.",
+    "There's no easy way to pin or pull out the key info.",
+    "Social pressure to stay in and reply."
+   ],
+   "existing": [
+    {
+     "name": "Mute and pinned messages",
+     "gap": "Muting hides the important stuff too, and few people pin."
+    },
+    {
+     "name": "Separate planning apps",
+     "gap": "Nobody wants another app."
+    }
+   ],
+   "sparks": [
+    "What if a chat could show a short 'what you missed that matters' summary?",
+    "Could plans in a chat turn into a checklist automatically?",
+    "How might you politely step back from a chat without leaving?"
+   ],
+   "sources": [
+    {
+     "title": "Group messaging feels like a part-time job (Secure Data Recovery)",
+     "url": "https://www.securedatarecovery.com/blog/group-messaging-feels-like-job"
+    },
+    {
+     "title": "Majority of Americans feel overwhelmed by group texts (KSL)",
+     "url": "https://www.ksl.com/article/50796732"
+    }
+   ]
+  },
+  {
+   "id": "battery-anxiety",
+   "title": "Your phone battery dies before the day is over",
+   "dek": "About 4 in 10 people can't get through a full day on one charge, and battery is now a top reason to buy a new phone.",
+   "category": "Tech",
+   "region": "Global",
+   "trend": "steady",
+   "scores": {
+    "reach": 9,
+    "growth": 3,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "~41%",
+    "label": "can't get through a full day on one charge"
+   },
+   "whyNow": "Software updates this year caused battery-drain complaints on Pixel and Galaxy phones.",
+   "frustration": "Battery anxiety starts well before the phone is nearly empty. You ration use, hunt for outlets, carry a power bank, and still end up at 5% when you need maps or a ride home. Batteries also weaken noticeably after a year or two.",
+   "voices": [
+    "Owners say an update suddenly made their phone die by lunchtime.",
+    "People say they start worrying once the battery drops below half.",
+    "Some say they're switching brands over battery problems."
+   ],
+   "stats": [
+    {
+     "value": "38%",
+     "label": "battery level where Americans start to worry, on average",
+     "src": 0
+    },
+    {
+     "value": "80%",
+     "label": "of US phone buyers call better battery life a must-have",
+     "src": 1
+    },
+    {
+     "value": "36%",
+     "label": "of Europeans say charging too often is a top frustration",
+     "src": 2
+    },
+    {
+     "value": "6,000+",
+     "label": "votes in a 2026 reader poll on battery anxiety",
+     "src": 3
+    }
+   ],
+   "chart": null,
+   "who": "Nearly every phone owner, especially people with phones older than two years.",
+   "causes": [
+    "Batteries lose capacity with every charge cycle.",
+    "Brighter screens, 5G and background apps use more power.",
+    "Buggy updates can drain batteries overnight."
+   ],
+   "existing": [
+    {
+     "name": "Power banks",
+     "gap": "One more thing to carry and remember to charge."
+    },
+    {
+     "name": "Battery saver modes",
+     "gap": "Turn off features you need."
+    },
+    {
+     "name": "Battery replacement",
+     "gap": "Costly and inconvenient."
+    }
+   ],
+   "sparks": [
+    "What if an app showed exactly which app drained your battery today, in plain words?",
+    "Could shared charging spots in schools or cafés be easier to find?",
+    "How might a phone warn you hours early that you won't make it to bedtime?"
+   ],
+   "sources": [
+    {
+     "title": "Survey reveals most people panic when their battery drops to 38% (TechSpot)",
+     "url": "https://www.techspot.com/news/107518-americans-panic-when-their-phone-battery-hits-38.html"
+    },
+    {
+     "title": "Battery life a top priority for phone buyers (WTOP / CNET)",
+     "url": "https://wtop.com/consumer-news/2026/03/battery-life-a-top-priority-for-phone-buyers-tech-survey-finds/"
+    },
+    {
+     "title": "Samsung study: Europeans care about battery life and privacy (SamMobile)",
+     "url": "https://www.sammobile.com/news/samsung-phone-study-shows-europeans-care-about-battery-life-and-privacy/"
+    },
+    {
+     "title": "Reader survey: smartphones still don't have enough battery life (Android Authority)",
+     "url": "https://androidauthority.com/battery-anxiety-poll-results-3676257/"
+    }
+   ]
+  },
+  {
+   "id": "storage-full",
+   "title": "'Storage almost full' pops up right when you go to take a photo",
+   "dek": "Most phone owners have seen the warning, and much of the space goes to photos and hidden app files they never look at.",
+   "category": "Tech",
+   "region": "Global",
+   "trend": "steady",
+   "scores": {
+    "reach": 8,
+    "growth": 3,
+    "solvable": 7
+   },
+   "keyStat": {
+    "value": "72%",
+    "label": "of iPhone users have seen 'Storage Almost Full'"
+   },
+   "whyNow": "Holiday photos and videos are about to fill phones up fast.",
+   "frustration": "The warning shows up at the worst moment, and you miss the shot. Cleaning up means scrolling through thousands of photos, guessing which apps are hogging space, or paying monthly for cloud storage.",
+   "voices": [
+    "People describe missing a once-only moment because the phone wouldn't take a photo.",
+    "Users are surprised that a messaging app's saved media, not their camera roll, filled the phone.",
+    "Some say they keep paying for cloud storage they don't really want."
+   ],
+   "stats": [
+    {
+     "value": "~1 in 5",
+     "label": "photos in a typical library are duplicates or near-duplicates",
+     "src": 0
+    },
+    {
+     "value": "5%",
+     "label": "of photos are ever deliberately deleted",
+     "src": 0
+    },
+    {
+     "value": "61%",
+     "label": "of parents have permanently lost important photos or videos",
+     "src": 1
+    },
+    {
+     "value": "70%",
+     "label": "of iPhone users pay for extra cloud storage",
+     "src": 2
+    }
+   ],
+   "chart": {
+    "title": "Pay for extra cloud storage, by phone (%)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "iPhone users",
+      "value": 70
+     },
+     {
+      "label": "Android users",
+      "value": 31
+     }
+    ],
+    "src": 2
+   },
+   "who": "Anyone with a phone that's a couple of years old, or anyone who takes lots of photos and videos.",
+   "causes": [
+    "Higher-resolution cameras make bigger files.",
+    "Messaging apps quietly save every photo and video you receive.",
+    "Nobody has time to sort thousands of photos."
+   ],
+   "existing": [
+    {
+     "name": "Cloud photo backup",
+     "gap": "Monthly fees, and confusing settings."
+    },
+    {
+     "name": "Built-in cleanup tools",
+     "gap": "Hard to find, and they miss duplicates."
+    }
+   ],
+   "sparks": [
+    "What if a 2-minute 'swipe to keep or delete' game cleared out duplicates?",
+    "Could your phone free space automatically before you open the camera?",
+    "How might families back up shared photos once instead of each paying separately?"
+   ],
+   "sources": [
+    {
+     "title": "iPhone photo habits study 2026 (DB Labs)",
+     "url": "https://ios-apps-website.web.app/research/iphone-photo-habits-study-2026"
+    },
+    {
+     "title": "Many parents aren't protecting photos and videos of their children (Stacker / Sandisk)",
+     "url": "https://stacker.com/stories/parenting-family/many-parents-arent-protecting-photos-and-videos-their-children-stored"
+    },
+    {
+     "title": "Cloud storage statistics (All About Cookies)",
+     "url": "https://allaboutcookies.org/cloud-storage-statistics"
+    }
+   ]
+  },
+  {
+   "id": "captcha-hell",
+   "title": "CAPTCHAs make you prove you're human over and over",
+   "dek": "Blurry letters and 'click every traffic light' puzzles make people quit logins and checkouts, while bots solve them anyway.",
+   "category": "Tech",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 7,
+    "growth": 3,
+    "solvable": 5
+   },
+   "keyStat": {
+    "value": "~1 in 4",
+    "label": "shoppers abandon checkout when a CAPTCHA appears"
+   },
+   "whyNow": "Black Friday checkouts are when bots, and the defenses against them, peak.",
+   "frustration": "You click every square with a bike, get it 'wrong', and get a fresh set. You're being treated like a robot while you're in a hurry, and it feels pointless because bots can often solve these puzzles better than people.",
+   "voices": [
+    "Shoppers say they gave up after failing a puzzle once.",
+    "People say unclear images and instructions are why they fail.",
+    "Users are frustrated that the puzzles keep getting harder."
+   ],
+   "stats": [
+    {
+     "value": "18.7%",
+     "label": "give up after one failed CAPTCHA at checkout",
+     "src": 0
+    },
+    {
+     "value": "27%",
+     "label": "of shoppers feel frustrated or distrustful when one appears",
+     "src": 0
+    },
+    {
+     "value": "Half+",
+     "label": "find 'click all the stoplights' moderately to extremely frustrating",
+     "src": 1
+    }
+   ],
+   "chart": null,
+   "who": "Everyone online, but especially people with vision problems or slow connections.",
+   "causes": [
+    "Sites fight an arms race with bots that keep learning to solve puzzles.",
+    "Harder puzzles stop people more than they stop bots.",
+    "Unclear images and instructions."
+   ],
+   "existing": [
+    {
+     "name": "Invisible checks that run in the background",
+     "gap": "Still fall back to puzzles."
+    },
+    {
+     "name": "Audio CAPTCHAs",
+     "gap": "Often just as hard."
+    }
+   ],
+   "sparks": [
+    "What if proving you're human worked once per device instead of once per site?",
+    "Could accessibility-first checks work for everyone?",
+    "How might sites stop bots without asking people to do anything?"
+   ],
+   "sources": [
+    {
+     "title": "CAPTCHAs are costing retailers customers (Fastly)",
+     "url": "https://www.fastly.com/blog/captchas-are-costing-retailers-customers"
+    },
+    {
+     "title": "The fraud/friction tightrope: CAPTCHA (HUMAN Security)",
+     "url": "https://humansecurity.com/?p=2136"
+    },
+    {
+     "title": "CAPTCHA user experience study (arXiv)",
+     "url": "https://arxiv.org/html/2405.18547v1"
+    }
+   ]
+  },
+  {
+   "id": "losing-keys-phone",
+   "title": "You lose your keys, phone or remote, again, right when you're late",
+   "dek": "People spend hours a year hunting for everyday items, and over a third have been late because of it.",
+   "category": "Home",
+   "region": "US",
+   "trend": "steady",
+   "scores": {
+    "reach": 9,
+    "growth": 2,
+    "solvable": 6
+   },
+   "keyStat": {
+    "value": "~17 hrs",
+    "label": "a year spent searching for lost items"
+   },
+   "whyNow": "Busy holiday travel and packing make it easy to misplace things.",
+   "frustration": "It always happens when you're already rushing. The item usually turns up somewhere obvious, but the panic and searching make you late, and sometimes you have to buy a replacement.",
+   "voices": [
+    "People say they usually find the lost item right where it should have been.",
+    "Some say losing things has caused arguments at home.",
+    "Many say they've been late to work or school because of a missing item."
+   ],
+   "stats": [
+    {
+     "value": "16 min",
+     "label": "average time to find each lost item",
+     "src": 0
+    },
+    {
+     "value": "1 in 3+",
+     "label": "have been late to work or school because of a lost item",
+     "src": 1
+    },
+    {
+     "value": "$2.7B",
+     "label": "a year spent replacing lost items (older survey)",
+     "src": 2
+    }
+   ],
+   "chart": {
+    "title": "How often people misplace common items (%, older survey)",
+    "unit": "%",
+    "rows": [
+     {
+      "label": "TV remote, weekly",
+      "value": 45
+     },
+     {
+      "label": "Phone",
+      "value": 33
+     },
+     {
+      "label": "Car keys",
+      "value": 28
+     },
+     {
+      "label": "Glasses",
+      "value": 27
+     }
+    ],
+    "src": 2
+   },
+   "who": "Nearly everyone, especially busy households and people with ADHD-style forgetfulness.",
+   "causes": [
+    "We put things down on autopilot while thinking about something else.",
+    "More small devices and accessories to keep track of.",
+    "Rushing makes memory worse."
+   ],
+   "existing": [
+    {
+     "name": "Bluetooth trackers (Tile, AirTag)",
+     "gap": "Cost money and only cover what you tag."
+    },
+    {
+     "name": "Key hooks and 'launch pads'",
+     "gap": "Only work if you build the habit."
+    }
+   ],
+   "sparks": [
+    "What if your phone reminded you where you last set your keys down?",
+    "Could a cheap 'leaving the house' checklist by the door actually stick?",
+    "How might a tracker cost almost nothing?"
+   ],
+   "sources": [
+    {
+     "title": "Keys, glasses, and the most frequently lost items (Life360 / Tile)",
+     "url": "https://www.life360.com/en-mx/blog/most-commonly-lost-items"
+    },
+    {
+     "title": "Keys, glasses, and other most frequently lost items in America (Stacker)",
+     "url": "https://stacker.com/stories/social-issues/keys-glasses-and-other-most-frequently-lost-items-america"
+    },
+    {
+     "title": "Items we misplace the most (iHeart, Pixie 'Lost & Found' survey)",
+     "url": "https://929tomfm.iheart.com/featured/kat/content/2017-05-03-items-we-misplace-the-most"
+    }
+   ]
+  }
+ ]
+}
