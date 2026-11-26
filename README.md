@@ -1,4 +1,6 @@
 # Friction
+In-Claude Link: https://claude.ai/artifact/Q7okgGLZRUM7tCLVPCLL34#today
+(Is not an online site yet)
 
 A news-style website that lists the everyday problems people are complaining about, with the evidence behind each one, so you can build the fix.
 
@@ -43,3 +45,4 @@ The version hosted on Claude has a few features that come from Claude itself. On
 ## Updating the problems
 
 `feed.json` follows a fixed shape. Each problem has an `id`, `title`, `dek`, `category`, `region`, `trend` (`worse`, `steady` or `better`), `scores` (`reach`, `growth`, `solvable` from 1–10), `keyStat`, `whyNow`, `frustration`, `voices`, `stats`, an optional `chart`, `who`, `causes`, `existing`, `sparks` and `sources`. Copy an existing entry as a template.
+
